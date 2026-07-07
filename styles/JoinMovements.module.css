@@ -1,0 +1,198 @@
+.joinSection {
+  width: 100%;
+  min-height: 760px;
+  display: flex;
+  background: #081b34;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  flex: 1;
+  min-height: 760px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  flex: 1;
+  background: #081b34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px;
+  position: relative;
+}
+
+.number {
+  color: #d4a63b;
+  letter-spacing: 8px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 72px;
+  line-height: 1.15;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  margin: 0;
+  z-index: 2;
+}
+
+.description {
+  margin-top: 45px;
+  max-width: 620px;
+  font-size: 25px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+}
+
+.button {
+  margin-top: 60px;
+  width: fit-content;
+  background: #d4a63b;
+  color: #081b34;
+  border: none;
+  padding: 22px 46px;
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.35s;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.button:hover {
+  background: white;
+  transform: translateY(-4px);
+}
+
+.arrow {
+  font-size: 24px;
+}
+
+.lotus {
+  position: absolute;
+  right: -30px;
+  bottom: 120px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.lotus img {
+  width: 430px;
+  height: auto;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:1100px) {
+
+  .joinSection{
+      flex-direction:column;
+  }
+
+  .imageContainer{
+      min-height:520px;
+  }
+
+  .content{
+      padding:70px 50px;
+  }
+
+  .title{
+      font-size:56px;
+  }
+
+  .description{
+      font-size:20px;
+  }
+
+  .lotus img{
+      width:320px;
+  }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+  .joinSection{
+      flex-direction:column;
+  }
+
+  .imageContainer{
+      min-height:420px;
+  }
+
+  .content{
+      padding:45px 28px 60px;
+  }
+
+  .number{
+      font-size:14px;
+      letter-spacing:5px;
+      margin-bottom:20px;
+  }
+
+  .title{
+      font-size:44px;
+      line-height:1.18;
+  }
+
+  .description{
+      margin-top:24px;
+      font-size:17px;
+      line-height:1.7;
+  }
+
+  .button{
+      margin-top:36px;
+      width:100%;
+      justify-content:center;
+      padding:18px;
+      font-size:15px;
+      letter-spacing:3px;
+  }
+
+  .lotus{
+      right:-40px;
+      bottom:30px;
+  }
+
+  .lotus img{
+      width:240px;
+  }
+
+}
+
+/* ---------- Small Mobile ---------- */
+
+@media(max-width:480px){
+
+  .imageContainer{
+      min-height:320px;
+  }
+
+  .title{
+      font-size:36px;
+  }
+
+  .description{
+      font-size:15px;
+  }
+
+  .button{
+      font-size:14px;
+      padding:16px;
+  }
+
+}
