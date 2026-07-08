@@ -32,9 +32,17 @@ export default function Countdown() {
     };
   };
 
-  const [time, setTime] = useState(calculateTime());
+  const [mounted, setMounted] = useState(false);
+  const [time, setTime] = useState({
+    days: "0",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
 
   useEffect(() => {
+    setMounted(true);
+    setTime(calculateTime());
     const interval = setInterval(() => {
       setTime(calculateTime());
     }, 1000);
@@ -43,10 +51,10 @@ export default function Countdown() {
   }, []);
 
   const items = [
-    { value: time.days, label: "DAYS" },
-    { value: time.hours, label: "HOURS" },
-    { value: time.minutes, label: "MINUTES" },
-    { value: time.seconds, label: "SECONDS" },
+    { value: mounted ? time.days : "0", label: "DAYS" },
+    { value: mounted ? time.hours : "00", label: "HOURS" },
+    { value: mounted ? time.minutes : "00", label: "MINUTES" },
+    { value: mounted ? time.seconds : "00", label: "SECONDS" },
   ];
 
   return (
