@@ -35,23 +35,23 @@ export default function Footer() {
           </p>
 
           <div className={styles.socials}>
-            <a href="#">
+            <a href="https://www.facebook.com/share/1Fyh8ZvZpp/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
 
-            <a href="#">
+            <a href="https://www.instagram.com/myjanani_?utm_source=qr" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/in/janani-conference-a1931b420" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />
             </a>
 
-            <a href="#">
+            <a href="https://www.youtube.com/channel/UClv0XLvK3z6RmURF70sOjpw" target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </a>
 
-            <a href="#">
+            <a href="https://x.com/jananiconf" target="_blank" rel="noopener noreferrer">
               <FaTwitter />
             </a>
           </div>
@@ -89,12 +89,12 @@ export default function Footer() {
 
           <div className={styles.contactItem}>
             <FiPhone />
-            <span>+91 11 1234 5678</span>
+            <span>+91 85909 36816</span>
           </div>
 
           <div className={styles.contactItem}>
             <FiMail />
-            <span>info@janani2026.org</span>
+            <span>drjerry@myjanani.in</span>
           </div>
 
           <div className={styles.contactItem}>
