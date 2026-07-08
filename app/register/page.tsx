@@ -35,23 +35,49 @@ export default function Register() {
 
             <div className={styles.formGroup}>
               <label htmlFor="name">Full Name</label>
-              <input type="text" id="name" name="name" required placeholder="John Doe" />
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                placeholder="John Doe" 
+                pattern="^[A-Za-z\s\-\']{2,50}$"
+                title="Please enter a valid name (letters and spaces only, 2-50 characters)"
+                minLength={2}
+                maxLength={50}
+              />
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" name="email" required placeholder="john@example.com" />
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                placeholder="john@example.com"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                title="Please enter a valid email address"
+              />
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" required placeholder="+91 00000 00000" />
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                required 
+                placeholder="+91 9876543210" 
+                pattern="^(\+\d{1,3}[- ]?)?\d{10}$"
+                title="Please enter a valid 10-digit phone number (e.g. 9876543210 or +91 9876543210)"
+              />
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="category">Registration Category</label>
-              <select id="category" name="category" required>
-                <option value="" disabled selected>Select an option</option>
+              <select id="category" name="category" required defaultValue="">
+                <option value="" disabled>Select an option</option>
                 <option value="delegate">General Delegate</option>
                 <option value="student">Student / Academia</option>
                 <option value="sponsor">Sponsor / Partner</option>
