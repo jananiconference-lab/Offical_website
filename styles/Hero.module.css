@@ -39,8 +39,8 @@
 
 position:absolute;
 
-width:700px;
-height:700px;
+width: min(700px, 80vw);
+height: min(700px, 80vw);
 
 right:-250px;
 top:-180px;
@@ -59,8 +59,8 @@ opacity:.10;
 
 position:absolute;
 
-width:600px;
-height:600px;
+width: min(600px, 70vw);
+height: min(600px, 70vw);
 
 left:-220px;
 bottom:-220px;
@@ -466,8 +466,8 @@ border:1px solid rgba(216,168,83,.20);
 
 .ringOne{
 
-width:540px;
-height:540px;
+width: min(540px, 90vw);
+height: min(540px, 90vw);
 
 animation:rotateSlow 30s linear infinite;
 
@@ -475,8 +475,8 @@ animation:rotateSlow 30s linear infinite;
 
 .ringTwo{
 
-width:430px;
-height:430px;
+width: min(430px, 75vw);
+height: min(430px, 75vw);
 
 animation:rotateReverse 24s linear infinite;
 
@@ -484,8 +484,8 @@ animation:rotateReverse 24s linear infinite;
 
 .ringThree{
 
-width:320px;
-height:320px;
+width: min(320px, 60vw);
+height: min(320px, 60vw);
 
 animation:rotateSlow 18s linear infinite;
 

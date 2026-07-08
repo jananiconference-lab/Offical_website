@@ -88,7 +88,7 @@ export default function Navbar() {
 
           <div className={styles.rightSection}>
             <Link
-              href="#register"
+              href="/register"
               className={styles.registerBtn}
             >
               Register Now
@@ -152,7 +152,7 @@ export default function Navbar() {
           ))}
 
           <Link
-            href="#register"
+            href="/register"
             className={styles.mobileRegister}
             onClick={() => setMenuOpen(false)}
           >

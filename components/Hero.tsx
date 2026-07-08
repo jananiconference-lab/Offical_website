@@ -61,7 +61,7 @@ export default function Hero() {
           <div className={styles.actions}>
 
             <Link
-              href="#register"
+              href="/register"
               className={styles.primaryBtn}
             >
               Register Now

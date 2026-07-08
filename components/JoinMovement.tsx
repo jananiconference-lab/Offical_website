@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/JoinMovements.module.css";
 
 export default function JoinMovement() {
@@ -28,10 +29,10 @@ export default function JoinMovement() {
           visionaries shaping the future of India.
         </p>
 
-        <button className={styles.button}>
+        <Link href="/register" className={styles.button}>
           REGISTER NOW
           <span className={styles.arrow}>→</span>
-        </button>
+        </Link>
 
         <div className={styles.lotus}>
           <img src="/images/lotus-outline.png" alt="" />

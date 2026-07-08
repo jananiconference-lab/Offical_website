@@ -1,0 +1,640 @@
+/* ===============================
+   PREMIUM JANANI NAVBAR
+================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all .35s ease;
+  padding: 20px 0;
+
+  background: transparent;
+}
+
+.scrolled {
+  padding: 14px 0;
+
+  background: rgba(4,17,31,.88);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(255,255,255,.06);
+
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+
+/* ===============================
+CONTAINER
+================================= */
+
+.container{
+
+max-width:1440px;
+
+width:92%;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:40px;
+
+}
+
+/* ===============================
+LOGO
+================================= */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+text-decoration:none;
+
+gap:14px;
+
+flex-shrink:0;
+
+min-width:290px;
+
+}
+
+.logoImage{
+
+width:60px;
+height:60px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+.logoImage :global(img){
+
+width:100%;
+height:auto;
+
+}
+
+.logoText{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.logoText h2{
+
+margin:0;
+
+font-size:27px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+color:white;
+
+font-family:"Playfair Display",serif;
+
+}
+
+.logoText span{
+
+margin-top:4px;
+
+font-size:10px;
+
+text-transform:uppercase;
+
+letter-spacing:1.8px;
+
+line-height:1.5;
+
+color:#C8D3DF;
+
+}
+
+/* ===============================
+DESKTOP NAV
+================================= */
+
+.desktopNav{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+flex:1;
+
+gap:34px;
+
+}
+
+.desktopNav a{
+
+position:relative;
+
+text-decoration:none;
+
+color:white;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.desktopNav a:hover{
+
+color:#D8A548;
+
+}
+
+.desktopNav a::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-8px;
+
+left:0;
+
+width:0;
+
+height:2px;
+
+background:#D8A548;
+
+transition:.35s;
+
+}
+
+.desktopNav a:hover::after{
+
+width:100%;
+
+}
+
+/* ===============================
+RIGHT
+================================= */
+
+.rightSection{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+flex-shrink:0;
+
+}
+
+/* ===============================
+REGISTER BUTTON
+================================= */
+
+.registerBtn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:15px 32px;
+
+border-radius:50px;
+
+background:linear-gradient(
+135deg,
+#F5CF75,
+#D8A548
+);
+
+text-decoration:none;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#06192F;
+
+transition:.35s;
+
+}
+
+.registerBtn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 15px 35px rgba(212,168,83,.35);
+
+}
+
+/* ===============================
+HAMBURGER
+================================= */
+
+.hamburger{
+
+display:none;
+
+width:48px;
+
+height:48px;
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+position:relative;
+
+padding:0;
+
+}
+
+.hamburger span{
+
+position:absolute;
+
+left:12px;
+
+width:24px;
+
+height:2px;
+
+background:white;
+
+transition:.35s;
+
+}
+
+.hamburger span:nth-child(1){
+
+top:15px;
+
+}
+
+.hamburger span:nth-child(2){
+
+top:23px;
+
+}
+
+.hamburger span:nth-child(3){
+
+top:31px;
+
+}
+
+.active span:nth-child(1){
+
+top:23px;
+
+transform:rotate(45deg);
+
+}
+
+.active span:nth-child(2){
+
+opacity:0;
+
+}
+
+.active span:nth-child(3){
+
+top:23px;
+
+transform:rotate(-45deg);
+
+}
+
+/* ===============================
+MOBILE MENU
+================================= */
+
+.mobileMenu{
+
+position:fixed;
+
+inset:0;
+
+background:#04111F;
+
+transform:translateX(100%);
+
+transition:.4s ease;
+
+z-index:1001;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.showMenu{
+
+transform:translateX(0);
+
+}
+
+.mobileHeader{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:30px 24px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.mobileLogo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.mobileLogo h3{
+
+margin:0;
+
+color:white;
+
+font-size:20px;
+
+}
+
+.mobileLogo p{
+
+margin:2px 0 0;
+
+color:#C8D3DF;
+
+font-size:11px;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+}
+
+.closeBtn{
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+.mobileLinks{
+
+display:flex;
+
+flex-direction:column;
+
+padding:40px 28px;
+
+gap:28px;
+
+}
+
+.mobileLinks a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+transition:.3s;
+
+}
+
+.mobileLinks a:hover{
+
+color:#D8A548;
+
+}
+
+.mobileRegister{
+
+margin-top:25px;
+
+padding:18px;
+
+text-align:center;
+
+background:linear-gradient(
+135deg,
+#F5CF75,
+#D8A548
+);
+
+border-radius:8px;
+
+color:#06192F !important;
+
+font-weight:700;
+
+}
+
+/* ===============================
+RESPONSIVE
+================================= */
+
+@media(max-width:1200px){
+
+.desktopNav{
+
+gap:22px;
+
+}
+
+.logo{
+
+min-width:250px;
+
+}
+
+}
+
+@media(max-width:1024px){
+
+.desktopNav{
+
+display:none;
+
+}
+
+.hamburger{
+
+display:block;
+
+}
+
+.logo{
+
+min-width:auto;
+
+}
+
+.logoText span{
+
+display:none;
+
+}
+
+.registerBtn{
+
+padding:14px 22px;
+
+font-size:12px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.container{
+
+width:94%;
+
+}
+
+.logoImage{
+
+width:50px;
+
+height:50px;
+
+}
+
+.logoText h2{
+
+font-size:20px;
+
+}
+
+.registerBtn{
+
+padding:12px 18px;
+
+font-size:11px;
+
+letter-spacing:1px;
+
+}
+
+.mobileLinks{
+
+padding:30px 24px;
+
+}
+
+.mobileLinks a{
+
+font-size:17px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+
+gap:10px;
+
+}
+
+.logoImage{
+
+width:42px;
+
+height:42px;
+
+}
+
+.logoText h2{
+
+font-size:17px;
+
+}
+
+.registerBtn{
+
+display:none;
+
+}
+
+.hamburger{
+
+display:block;
+
+}
+
+.mobileHeader{
+
+padding:22px;
+
+}
+
+.mobileLogo h3{
+
+font-size:18px;
+
+}
+
+}

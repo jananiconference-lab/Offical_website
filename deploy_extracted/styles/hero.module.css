@@ -1,0 +1,1069 @@
+/* ===================================================
+   JANANI 2026 HERO
+   Premium Conference Landing Page
+=================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at top right, rgba(212,168,83,.10), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(36,84,150,.12), transparent 40%),
+    linear-gradient(135deg,#04111F 0%,#071C34 45%,#081A2F 100%);
+}
+
+/* =============================
+   GRID OVERLAY
+============================= */
+
+.grid{
+  position:absolute;
+  inset:0;
+  opacity:.04;
+
+  background-image:
+      linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+
+  background-size:70px 70px;
+}
+
+/* =============================
+   GLOW EFFECTS
+============================= */
+
+.bgGlowOne{
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+right:-250px;
+top:-180px;
+
+border-radius:50%;
+
+background:#D8A548;
+
+filter:blur(170px);
+
+opacity:.10;
+
+}
+
+.bgGlowTwo{
+
+position:absolute;
+
+width:600px;
+height:600px;
+
+left:-220px;
+bottom:-220px;
+
+border-radius:50%;
+
+background:#204E9E;
+
+filter:blur(190px);
+
+opacity:.10;
+
+}
+
+/* =============================
+   CONTAINER
+============================= */
+
+.container{
+
+position:relative;
+
+z-index:2;
+
+width:min(1380px,92%);
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1.05fr .95fr;
+
+gap:80px;
+
+align-items:center;
+
+padding-top:140px;
+
+padding-bottom:80px;
+
+}
+
+/* =============================
+LEFT
+============================= */
+
+.left{
+
+max-width:680px;
+
+}
+
+.tag{
+
+display:inline-block;
+
+margin-bottom:35px;
+
+font-size:13px;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:#D8A548;
+
+font-weight:500;
+
+}
+
+/* =============================
+TITLE
+============================= */
+
+.heroTitle{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.smallHeading{
+
+font-size:22px;
+
+letter-spacing:15px;
+
+color:#F7F4EF;
+
+margin-bottom:18px;
+
+}
+
+.bigHeading{
+
+font-family:"Playfair Display",serif;
+
+font-size:clamp(5rem,9vw,8rem);
+
+line-height:.88;
+
+font-weight:700;
+
+color:#F7F4EF;
+
+margin:0;
+
+}
+
+.divider{
+
+display:flex;
+
+align-items:center;
+
+gap:24px;
+
+margin:22px 0;
+
+}
+
+.divider::before,
+
+.divider::after{
+
+content:"";
+
+flex:1;
+
+height:2px;
+
+background:#D8A548;
+
+}
+
+.divider span{
+
+font-size:18px;
+
+letter-spacing:10px;
+
+text-transform:uppercase;
+
+color:#D8A548;
+
+white-space:nowrap;
+
+}
+
+/* =============================
+DESCRIPTION
+============================= */
+
+.description{
+
+margin-top:42px;
+
+max-width:620px;
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#C8D3DF;
+
+}
+
+/* =============================
+BUTTONS
+============================= */
+
+.actions{
+
+display:flex;
+
+gap:22px;
+
+margin-top:50px;
+
+flex-wrap:wrap;
+
+}
+
+.primaryBtn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 38px;
+
+background:linear-gradient(
+135deg,
+#F3C566,
+#D8A548
+);
+
+border-radius:4px;
+
+color:#06192F;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-decoration:none;
+
+text-transform:uppercase;
+
+transition:.35s;
+
+}
+
+.primaryBtn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 20px 45px rgba(212,168,83,.35);
+
+}
+
+.secondaryBtn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 38px;
+
+border:1px solid rgba(216,168,83,.6);
+
+color:white;
+
+text-decoration:none;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+transition:.35s;
+
+}
+
+.secondaryBtn:hover{
+
+background:#D8A548;
+
+color:#071C34;
+
+}
+
+/* ==========================================
+   STATS SECTION
+========================================== */
+
+.stats {
+  display: flex;
+  gap: 22px;
+  margin-top: 70px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 180px;
+  min-width: 170px;
+
+  padding: 28px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.05);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  transition: .4s;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:2px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#D8A548,
+transparent
+);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:#D8A548;
+
+box-shadow:
+
+0 20px 50px rgba(212,168,83,.18);
+
+}
+
+.card h2{
+
+margin:0;
+
+font-size:42px;
+
+color:#D8A548;
+
+font-family:"Playfair Display",serif;
+
+}
+
+.card p{
+
+margin-top:8px;
+
+color:#CFD7E2;
+
+font-size:15px;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+}
+
+/* ==========================================
+RIGHT SIDE
+========================================== */
+
+.right{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+/* ==========================================
+LOGO WRAPPER
+========================================== */
+
+.logoWrapper{
+
+position:relative;
+
+width:min(560px,100%);
+aspect-ratio:1;
+
+height:560px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/* ==========================================
+ROTATING RINGS
+========================================== */
+
+.ringOne,
+.ringTwo,
+.ringThree{
+
+position:absolute;
+
+border-radius:50%;
+
+border:1px solid rgba(216,168,83,.20);
+
+}
+
+.ringOne{
+
+width:540px;
+height:540px;
+
+animation:rotateSlow 30s linear infinite;
+
+}
+
+.ringTwo{
+
+width:430px;
+height:430px;
+
+animation:rotateReverse 24s linear infinite;
+
+}
+
+.ringThree{
+
+width:320px;
+height:320px;
+
+animation:rotateSlow 18s linear infinite;
+
+}
+
+/* ==========================================
+LOGO CARD
+========================================== */
+
+.logoCard{
+
+position:relative;
+
+width:62%;
+aspect-ratio: 1;
+height:340px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+background:
+
+linear-gradient(
+
+145deg,
+
+rgba(255,255,255,.08),
+
+rgba(255,255,255,.02)
+
+);
+
+border:1px solid rgba(255,255,255,.10);
+
+backdrop-filter:blur(30px);
+
+-webkit-backdrop-filter:blur(30px);
+
+box-shadow:
+
+0 30px 70px rgba(0,0,0,.35);
+
+animation:floatLogo 7s ease-in-out infinite;
+
+}
+
+.logoCard::before{
+
+content:"";
+
+position:absolute;
+
+inset:-18px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(216,168,83,.28),
+
+transparent 70%
+
+);
+
+z-index:-1;
+
+filter:blur(45px);
+
+}
+
+ 
+
+.logoImage{
+    width:78%;
+}
+
+.logoImage :global(img){
+    width:100%;
+    height:auto;
+}
+/* ==========================================
+SCROLL INDICATOR
+========================================== */
+
+.scrollDown{
+
+position:absolute;
+
+left:50%;
+
+bottom:30px;
+
+transform:translateX(-50%);
+
+}
+
+.scrollDown span{
+
+display:block;
+
+width:28px;
+
+height:46px;
+
+border-radius:40px;
+
+border:2px solid rgba(255,255,255,.35);
+
+position:relative;
+
+}
+
+.scrollDown span::before{
+
+content:"";
+
+position:absolute;
+
+width:6px;
+height:6px;
+
+border-radius:50%;
+
+background:#D8A548;
+
+left:50%;
+
+top:8px;
+
+transform:translateX(-50%);
+
+animation:scrollMove 2s infinite;
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes scrollMove {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 18px);
+  }
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 70px;
+    text-align: center;
+  }
+
+  .left {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .divider {
+    justify-content: center;
+  }
+
+  .divider::before,
+  .divider::after {
+    max-width: 160px;
+  }
+
+}
+
+@media (max-width:991px){
+
+.container{
+
+padding-top:120px;
+padding-bottom:70px;
+
+}
+
+.logoWrapper{
+
+width:430px;
+height:430px;
+
+}
+
+.ringOne{
+
+width:420px;
+height:420px;
+
+}
+
+.ringTwo{
+
+width:340px;
+height:340px;
+
+}
+
+.ringThree{
+
+width:260px;
+height:260px;
+
+}
+
+.logoCard{
+
+width:270px;
+height:270px;
+
+}
+
+.bigHeading{
+
+font-size:70px;
+
+}
+
+.description{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+min-height:auto;
+
+}
+
+.container{
+
+padding-top:110px;
+
+padding-bottom:70px;
+
+}
+
+.tag{
+
+font-size:11px;
+
+letter-spacing:3px;
+
+}
+
+.smallHeading{
+
+font-size:15px;
+
+letter-spacing:8px;
+
+}
+
+.bigHeading{
+
+font-size:54px;
+
+}
+
+.divider{
+
+gap:14px;
+
+margin:18px 0;
+
+}
+
+.divider span{
+
+font-size:13px;
+
+letter-spacing:5px;
+
+}
+
+.description{
+
+font-size:16px;
+
+margin-top:30px;
+
+}
+
+.actions{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.primaryBtn,
+.secondaryBtn{
+
+width:280px;
+
+}
+
+.stats{
+
+gap:18px;
+
+margin-top:50px;
+
+}
+
+.card{
+
+min-width:150px;
+
+padding:22px;
+
+}
+
+.card h2{
+
+font-size:32px;
+
+}
+
+.logoWrapper{
+
+width:320px;
+height:320px;
+
+margin-top:10px;
+
+}
+
+.ringOne{
+
+width:310px;
+height:310px;
+
+}
+
+.ringTwo{
+
+width:250px;
+height:250px;
+
+}
+
+.ringThree{
+
+width:180px;
+height:180px;
+
+}
+
+.logoCard{
+
+width:190px;
+height:190px;
+
+}
+
+.scrollDown{
+
+display:none;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.container{
+
+width:92%;
+
+padding-top:95px;
+
+}
+
+.tag{
+
+font-size:10px;
+
+letter-spacing:2px;
+
+margin-bottom:22px;
+
+}
+
+.smallHeading{
+
+font-size:12px;
+
+letter-spacing:5px;
+
+margin-bottom:10px;
+
+}
+
+.bigHeading{
+
+font-size:42px;
+
+}
+
+.divider{
+
+margin:14px 0;
+
+}
+
+.divider span{
+
+font-size:11px;
+
+letter-spacing:3px;
+
+}
+
+.description{
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+.primaryBtn,
+.secondaryBtn{
+
+width:100%;
+
+padding:16px;
+
+}
+
+.stats{
+
+flex-direction:column;
+
+}
+
+.card{
+
+width:100%;
+
+}
+
+.logoWrapper{
+
+width:260px;
+height:260px;
+
+}
+
+.ringOne{
+
+width:250px;
+height:250px;
+
+}
+
+.ringTwo{
+
+width:200px;
+height:200px;
+
+}
+
+.ringThree{
+
+width:145px;
+height:145px;
+
+}
+
+.logoCard{
+
+width:155px;
+height:155px;
+
+}
+
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.primaryBtn:focus-visible,
+.secondaryBtn:focus-visible{
+
+outline:2px solid #D8A548;
+outline-offset:4px;
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+.hero,
+.hero * {
+  animation: none !important;
+  transition: none !important;
+}
+
+}
+.hero{
+
+isolation:isolate;
+
+}

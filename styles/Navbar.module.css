@@ -345,24 +345,17 @@ transform:rotate(-45deg);
 MOBILE MENU
 ================================= */
 
-.mobileMenu{
-
-position:fixed;
-
-inset:0;
-
-background:#04111F;
-
-transform:translateX(100%);
-
-transition:.4s ease;
-
-z-index:1001;
-
-display:flex;
-
-flex-direction:column;
-
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 17, 31, 0.95);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
 }
 
 .showMenu{
@@ -433,38 +426,29 @@ cursor:pointer;
 
 }
 
-.mobileLinks{
-
-display:flex;
-
-flex-direction:column;
-
-padding:40px 28px;
-
-gap:28px;
-
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 28px;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
-.mobileLinks a{
-
-text-decoration:none;
-
-color:white;
-
-font-size:18px;
-
-text-transform:uppercase;
-
-letter-spacing:2px;
-
-transition:.3s;
-
+.mobileLinks a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: .3s;
+  font-family: var(--font-cormorant);
 }
 
-.mobileLinks a:hover{
-
-color:#D8A548;
-
+.mobileLinks a:hover {
+  color: #D8A548;
+  transform: scale(1.05);
 }
 
 .mobileRegister{
