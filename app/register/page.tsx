@@ -19,6 +19,7 @@ export default function Register() {
   const [loading, setLoading] = useState(false);
   const [successData, setSuccessData] = useState<{ id: string; name: string } | null>(null);
   const [error, setError] = useState("");
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -29,7 +30,35 @@ export default function Register() {
     setLoading(true);
     setError("");
 
+    if (!agreedToTerms) {
+      setError("You must agree to the Terms of Use and Privacy Policy to register.");
+      setLoading(false);
+      return;
+    }
+
+    const phoneRegex = /^(\+91[\-\s]?)?[6-9]\d{9}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      setError("Please enter a valid 10-digit Indian phone number.");
+      setLoading(false);
+      return;
+    }
+
     try {
+      // Check for duplicates (same name AND same category AND (same email OR same phone))
+      const { data: existing, error: existingError } = await supabase
+        .from("registrations")
+        .select("id")
+        .eq("name", formData.name)
+        .eq("category", formData.category)
+        .or(`email.eq.${formData.email},phone.eq.${formData.phone}`);
+      
+      if (existingError) throw existingError;
+      if (existing && existing.length > 0) {
+        setError("You are already registered for this category.");
+        setLoading(false);
+        return;
+      }
+
       const { data, error: sbError } = await supabase
         .from("registrations")
         .insert([
@@ -215,7 +244,21 @@ export default function Register() {
                     <option value="student">Student / Academia</option>
                     <option value="sponsor">Sponsor / Partner</option>
                     <option value="speaker">Speaker</option>
+                    <option value="volunteer">Volunteer</option>
                   </select>
+                </div>
+
+                <div className={styles.formGroup} style={{ flexDirection: "row", alignItems: "center", gap: "10px" }}>
+                  <input 
+                    type="checkbox" 
+                    id="terms" 
+                    checked={agreedToTerms}
+                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                    style={{ width: "auto" }}
+                  />
+                  <label htmlFor="terms" style={{ margin: 0, fontSize: "14px", color: "#C8D3DF" }}>
+                    I agree to the <a href="/terms-of-use" target="_blank" style={{ color: "#D8A548" }}>Terms of Use</a> and <a href="/privacy-policy" target="_blank" style={{ color: "#D8A548" }}>Privacy Policy</a>.
+                  </label>
                 </div>
 
                 <button type="submit" className={styles.submitBtn} disabled={loading}>
@@ -234,9 +277,15 @@ export default function Register() {
                 <h3 style={{ color: "#D8A548", marginBottom: "15px" }}>⚠️ IMPORTANT</h3>
                 <p>You MUST download your Event Pass now. It contains your unique QR code required for entry.</p>
                 
-                {/* Hidden QR Code for PDF generation */}
-                <div style={{ display: "none" }}>
-                  <QRCodeSVG id="qr-code-svg" value={successData.id} size={200} level="H" />
+                <div style={{ background: "white", padding: "30px", borderRadius: "8px", margin: "25px auto", maxWidth: "300px", color: "black", boxShadow: "0 10px 25px rgba(0,0,0,0.5)" }}>
+                  <h2 style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "5px" }}>JANANI 2026 PASS</h2>
+                  <p style={{ fontSize: "0.9rem", color: "#555", marginBottom: "20px" }}>{successData.name}</p>
+                  
+                  <div style={{ background: "#f5f5f5", padding: "15px", borderRadius: "8px", display: "inline-block", marginBottom: "15px" }}>
+                    <QRCodeSVG id="qr-code-svg" value={successData.id} size={150} level="H" />
+                  </div>
+                  
+                  <p style={{ fontSize: "0.8rem", color: "#888", fontFamily: "monospace" }}>ID: {successData.id.slice(0, 12).toUpperCase()}</p>
                 </div>
                 
                 <button 

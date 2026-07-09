@@ -19,37 +19,37 @@ export default function Home() {
       </header>
       
       <article>
-        <section id="hero">
+        <div id="hero">
           <Hero />
-        </section>
+        </div>
         
-        <section id="countdown">
+        <div id="countdown">
           <Countdown />
-        </section>
+        </div>
 
-        <section id="about">
+        <div id="about">
           <AboutJanani />
-        </section>
+        </div>
 
-        <section id="pillars">
+        <div id="pillars">
           <Pillars />
-        </section>
+        </div>
 
-        <section id="programme">
+        <div id="programme">
           <ProgrammeSchedule />
-        </section>
+        </div>
 
-        <section id="kalam">
+        <div id="kalam">
           <Kalam /> 
-        </section>
+        </div>
 
-        <section id="join-movement">
+        <div id="join-movement">
           <JoinMovement />
-        </section>
+        </div>
 
-        <section id="awards">
+        <div id="awards">
           <AwardsSection />
-        </section>
+        </div>
         
         <FAQ />
       </article>

@@ -12,10 +12,7 @@ const faqs = [
     question: "How do I register and download my event pass?",
     answer: "You can register through our secure portal on this website. Once your registration is confirmed, you will be able to download your PDF pass containing a unique QR code. Please keep this QR code handy as it is required for entry."
   },
-  {
-    question: "Is accommodation provided for international delegates?",
-    answer: "We offer special rates with our partner hotels, including Le Meridien Kochi. However, delegates are responsible for booking their own accommodation. Please check the 'Accommodation' link in the footer for partner discounts."
-  },
+
   {
     question: "What is the primary focus of the JANANI 2026 conference?",
     answer: "JANANI 2026 focuses on honoring mothers, empowering women leaders, and building nations through female entrepreneurship, healthcare innovations, and educational reform across India and globally."

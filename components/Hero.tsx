@@ -17,7 +17,7 @@ export default function Hero() {
 
         {/* LEFT CONTENT */}
 
-        <div className={styles.left}>
+        <div className={styles.heroContentColumn}>
 
           <span className={styles.tag}>
             APJ ABDUL KALAM INTERNATIONAL FOUNDATION
@@ -99,9 +99,9 @@ export default function Hero() {
 
         {/* RIGHT SIDE */}
 
-        <div className={styles.right}>
+        <div className={styles.heroLogoColumn}>
 
-          <div className={styles.logoWrapper}>
+          <div className={styles.floatingLogoContainer}>
 
             <div className={styles.ringOne}></div>
             <div className={styles.ringTwo}></div>
@@ -114,6 +114,7 @@ export default function Hero() {
             alt="Janani Logo"
             width={450}
             height={450}
+            style={{ width: "100%", height: "auto" }}
             priority
         />
     </div>

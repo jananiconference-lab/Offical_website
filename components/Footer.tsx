@@ -35,23 +35,23 @@ export default function Footer() {
           </p>
 
           <div className={styles.socials}>
-            <a href="https://www.facebook.com/share/1Fyh8ZvZpp/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61591536880821&mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
 
-            <a href="https://www.instagram.com/myjanani_?utm_source=qr" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/myjanani_?igsh=MWN1dGVub3F0MmgzYQ==" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
 
-            <a href="https://www.linkedin.com/in/janani-conference-a1931b420" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/my-janani-a1931b420/" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />
             </a>
 
-            <a href="https://www.youtube.com/channel/UClv0XLvK3z6RmURF70sOjpw" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@my_janani" target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </a>
 
-            <a href="https://x.com/jananiconf" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/my_janani_" target="_blank" rel="noopener noreferrer">
               <FaTwitter />
             </a>
           </div>
@@ -62,10 +62,10 @@ export default function Footer() {
         <div className={styles.column}>
           <h4>Quick Links</h4>
 
-          <a href="#">About JANANI</a>
-          <a href="#">Programme</a>
-          <a href="#">Speakers</a>
-          <a href="#">Awards</a>
+          <a href="#about">About JANANI</a>
+          <a href="#programme">Programme</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#awards">Awards</a>
           <a href="#">Partners</a>
           <a href="#">Media Gallery</a>
         </div>
@@ -75,11 +75,10 @@ export default function Footer() {
         <div className={styles.column}>
           <h4>Help & Support</h4>
 
-          <a href="#">Registration</a>
-          <a href="#">Accommodation</a>
-          <a href="#">Volunteer</a>
+          <a href="/register">Registration</a>
+          <a href="/register">Volunteer</a>
           <a href="#">Partners Enquiry</a>
-          <a href="#">FAQs</a>
+          <a href="#faq">FAQs</a>
         </div>
 
         {/* CONTACT */}
