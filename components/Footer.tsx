@@ -129,8 +129,8 @@ export default function Footer() {
         <p>© 2026 JANANI. All rights reserved.</p>
 
         <div className={styles.bottomLinks}>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
         </div>
       </div>
     </footer>
