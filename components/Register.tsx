@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
 import styles from "../styles/Register.module.css";
 
 const EVENT_DATE = new Date("2026-07-24T09:00:00");
@@ -20,6 +21,12 @@ export default function Register() {
     minutes: 0,
     seconds: 0,
   });
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -51,8 +58,24 @@ export default function Register() {
     return () => window.clearInterval(timer);
   }, []);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setStatus("loading");
+
+    const { error } = await supabase
+      .from("registrations")
+      .insert([{ name, email, phone, message }]);
+
+    if (error) {
+      console.error(error);
+      setStatus("error");
+    } else {
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    }
   };
 
   return (
@@ -194,27 +217,43 @@ Gain exclusive access to expert-led sessions, networking opportunities, and indu
 
             <input type="text" 
             placeholder="Name" 
-            aria-label="Name" />
+            aria-label="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            />
 
             <input type="email"
              placeholder="Email" 
-             aria-label="Email" />
+             aria-label="Email"
+             value={email}
+             onChange={(e) => setEmail(e.target.value)}
+             required
+             />
 
             <input
               type="tel"
               placeholder="Phone Number"
               aria-label="Phone Number"
               pattern="[0-9]{10,15}"
-  required
+              required
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
 
             <textarea
               placeholder="Message"
               aria-label="Message"
               rows={3}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
 
-            <button type="submit">Register</button>
+            <button type="submit" disabled={status === "loading"}>
+              {status === "loading" ? "Registering..." : "Register"}
+            </button>
+            {status === "success" && <p style={{color: "#4ade80", marginTop: "1rem"}}>Registration successful!</p>}
+            {status === "error" && <p style={{color: "#ef4444", marginTop: "1rem"}}>Error submitting form. Please try again.</p>}
           </form>
 
           {/* MAP */}
