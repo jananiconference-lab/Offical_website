@@ -25,6 +25,7 @@ export default function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [category, setCategory] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   useEffect(() => {
@@ -63,7 +64,7 @@ export default function Register() {
 
     const { error } = await supabase
       .from("registrations")
-      .insert([{ name, email, phone }]);
+      .insert([{ name, email, phone, category }]);
 
     if (error) {
       console.error(error);
@@ -73,6 +74,7 @@ export default function Register() {
       setName("");
       setEmail("");
       setPhone("");
+      setCategory("");
     }
   };
 
@@ -239,6 +241,19 @@ Gain exclusive access to expert-led sessions, networking opportunities, and indu
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
+
+            <select
+              aria-label="Category"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              required
+            >
+              <option value="" disabled>Select Category</option>
+              <option value="Student">Student</option>
+              <option value="Professional">Professional</option>
+              <option value="Entrepreneur">Entrepreneur</option>
+              <option value="Other">Other</option>
+            </select>
 
             <button type="submit" disabled={status === "loading"}>
               {status === "loading" ? "Registering..." : "Register"}
