@@ -594,7 +594,7 @@
   background: #fff;
   padding: 10px;
   width: fit-content;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .ticketField {

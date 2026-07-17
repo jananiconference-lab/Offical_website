@@ -105,6 +105,16 @@ export default function Register() {
     }
   };
 
+  useEffect(() => {
+    if (status === "success" && ticketData) {
+      // Give the DOM a tiny amount of time to render the ticket fully before snapshotting
+      const timer = setTimeout(() => {
+        downloadTicket();
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [status, ticketData]);
+
   return (
     <section className={styles.section} id="register">
       <div className={styles.container}>
