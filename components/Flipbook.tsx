@@ -63,7 +63,6 @@ export default function Flipbook({ file }: FlipbookProps) {
             startPage={0}
             drawShadow
             flippingTime={700}
-            usePortrait
             startZIndex={0}
             autoSize
             clickEventForward
