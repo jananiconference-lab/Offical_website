@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Speakers from "@/components/speakers";
 import WhyAttend from "@/components/WhyAttend";
-import Stakeholders from "@/components/stakeholders";
 import Register from "@/components/Register";
 import Legacy from "@/components/Legacy";
 
@@ -26,7 +25,6 @@ export default function Home() {
       <Legacy/>
       <Speakers/>
       <WhyAttend/>
-      <Stakeholders/> 
       <TeamIntro/>
       <Register/>
         
