@@ -298,9 +298,7 @@ export default function Speakers() {
     <section className={styles.speakers} id="speakers">
       <header className={styles.header}>
         <h2>
-          DISTINGUISHED
-          <br />
-          GUESTS
+          PANELISTS
         </h2>
 
         <p>

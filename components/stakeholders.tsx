@@ -36,8 +36,6 @@ export default function Stakeholders() {
       <div className={styles.container}>
         <header className={styles.header}>
           <h2>
-            MESSAGE FROM
-            <br />
             STAKEHOLDERS
           </h2>
         </header>
