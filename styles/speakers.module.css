@@ -57,10 +57,6 @@
   animation: marqueeRight 38s linear infinite;
 }
 
-/* Pause animation on hover */
-.row:hover .track {
-  animation-play-state: paused;
-}
 
 .card {
   position: relative;
@@ -77,19 +73,12 @@
 
 .image {
   object-fit: cover;
-
-  /* Grey images */
-  filter: grayscale(100%) brightness(0.9) contrast(1.05);
-
-  transition:
-    transform .5s ease,
-    filter .5s ease;
+  transition: transform .5s ease;
 }
 
-/* Image becomes colored on hover */
+/* Image becomes zoomed on hover */
 .imageCard:hover .image {
   transform: scale(1.05);
-  filter: grayscale(0%) brightness(1);
 }
 
 .imageOverlay {
@@ -99,7 +88,9 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
 
   background: linear-gradient(
     to top,
