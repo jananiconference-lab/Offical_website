@@ -59,11 +59,33 @@ export default function Flipbook({ file }: FlipbookProps) {
   const bookWidth = isMobile ? windowWidth - 40 : 550;
   const bookHeight = isMobile ? bookWidth * 1.414 : 778;
 
+  const bookRef = React.useRef<any>(null);
+
+  const nextButtonClick = () => {
+    if (bookRef.current) {
+      bookRef.current.pageFlip().flipNext();
+    }
+  };
+
+  const prevButtonClick = () => {
+    if (bookRef.current) {
+      bookRef.current.pageFlip().flipPrev();
+    }
+  };
+
   return (
     <section className={styles.container}>
       <Document file={file} onLoadSuccess={onLoadSuccess}>
         {numPages > 0 && (
-          <HTMLFlipBook
+          <div className={styles.flipbookWrapper}>
+            <button className={`${styles.navButton} ${styles.prev}`} onClick={prevButtonClick}>
+              &#10094;
+            </button>
+            <button className={`${styles.navButton} ${styles.next}`} onClick={nextButtonClick}>
+              &#10095;
+            </button>
+            <HTMLFlipBook
+              ref={bookRef}
             style={{}}
             width={bookWidth}
             height={bookHeight}
@@ -73,7 +95,7 @@ export default function Flipbook({ file }: FlipbookProps) {
             minHeight={400}
             maxHeight={1414}
             maxShadowOpacity={0.5}
-            showCover
+            showCover={!isMobile}
             mobileScrollSupport
             className={styles.book}
             startPage={0}
@@ -101,7 +123,8 @@ export default function Flipbook({ file }: FlipbookProps) {
                 />
               </FlipPage>
             ))}
-          </HTMLFlipBook>
+            </HTMLFlipBook>
+          </div>
         )}
       </Document>
     </section>
