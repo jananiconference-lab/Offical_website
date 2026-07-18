@@ -59,6 +59,9 @@ export default function Flipbook({ file }: FlipbookProps) {
   const bookWidth = isMobile ? windowWidth - 40 : 550;
   const bookHeight = isMobile ? bookWidth * 1.414 : 778;
 
+  const maxAvailableHeight = windowHeight > 160 ? windowHeight - 160 : 800;
+  const maxAvailableWidth = maxAvailableHeight / 1.414;
+
   const bookRef = React.useRef<any>(null);
 
   const nextButtonClick = () => {
@@ -91,9 +94,9 @@ export default function Flipbook({ file }: FlipbookProps) {
             height={bookHeight}
             size="stretch"
             minWidth={315}
-            maxWidth={1000}
+            maxWidth={isMobile ? 1000 : maxAvailableWidth}
             minHeight={400}
-            maxHeight={1414}
+            maxHeight={isMobile ? 1414 : maxAvailableHeight}
             maxShadowOpacity={0.5}
             showCover={!isMobile}
             mobileScrollSupport
