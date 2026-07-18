@@ -19,7 +19,7 @@ type TeamGroup = {
 const teamGroups: TeamGroup[] = [
   {
     index: "01",
-    label: "Kalam's Family",
+    label: "House of Kalam",
     description:
       "The family and foundation leadership carrying forward Dr. A.P.J. Abdul Kalam's enduring vision of service and nation-building.",
     members: [
