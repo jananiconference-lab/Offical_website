@@ -49,13 +49,13 @@ export default function Flipbook({ file }: FlipbookProps) {
         {numPages > 0 && (
           <HTMLFlipBook
             style={{}}
-            width={450}
-            height={650}
+            width={550}
+            height={778}
             size="stretch"
-            minWidth={280}
-            maxWidth={700}
+            minWidth={315}
+            maxWidth={1000}
             minHeight={400}
-            maxHeight={900}
+            maxHeight={1414}
             maxShadowOpacity={0.5}
             showCover
             mobileScrollSupport
@@ -79,7 +79,7 @@ export default function Flipbook({ file }: FlipbookProps) {
               >
                 <Page
                   pageNumber={index + 1}
-                  width={430}
+                  width={550}
                   renderAnnotationLayer={false}
                   renderTextLayer={false}
                 />
