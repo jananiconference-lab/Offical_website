@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+}
+
+.book {
+  margin: auto;
+}
+
+.page {
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.page canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.react-pdf__Page {
+  display: flex;
+  justify-content: center;
+}
+
+.react-pdf__Page__canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}

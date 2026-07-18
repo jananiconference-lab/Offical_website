@@ -3,58 +3,6 @@
 import Image from "next/image";
 import styles from "../styles/speakers.module.css";
 
-<<<<<<< HEAD
-=======
-const topSpeakers = [
-  { name: "Mallika Sukumaran", role: "Distinguished Guest", image: null },
-  { name: "Indulekha Warrier", role: "Distinguished Guest", image: null },
-  { name: "Zaira Shaan", role: "Distinguished Guest", image: null },
-  { name: "Elsa Royce", role: "Distinguished Guest", image: null },
-  { name: "Anooja Bashir", role: "Distinguished Guest", image: null },
-  { name: "Sara George Muthoot", role: "Distinguished Guest", image: null },
-  { name: "Usha Titus IAS", role: "Distinguished Guest", image: null },
-  { name: "Uma Thomas", role: "Distinguished Guest", image: null },
-  { name: "Seena Tony Jose", role: "Distinguished Guest", image: null },
-  { name: "Uthara Ramakrishnan", role: "Distinguished Guest", image: null },
-  { name: "Nuzarath Jahan", role: "Distinguished Guest", image: null },
-  { name: "Dr. Ashitha Menon", role: "Distinguished Guest", image: null },
-  { name: "Leema Jacob", role: "Distinguished Guest", image: null },
-  { name: "Arathy Krishna", role: "Distinguished Guest", image: null },
-  { name: "Nisary Mahesh", role: "Distinguished Guest", image: null },
-  { name: "Melani Shibu", role: "Distinguished Guest", image: null },
-  { name: "Ashwathy Rajendran", role: "Distinguished Guest", image: null },
-  { name: "Anupa Krishnan", role: "Distinguished Guest", image: null },
-  { name: "Vardhini Sharma", role: "Distinguished Guest", image: null },
-  { name: "Priyanka Nair", role: "Distinguished Guest", image: null },
-  { name: "Anju Bobby George", role: "Distinguished Guest", image: null },
-  { name: "M. M.", role: "Distinguished Guest", image: null },
-];
-
-const bottomSpeakers = [
-  { name: "Dr. Susan Verghese", role: "Distinguished Guest", image: null },
-  { name: "Dr. Rupa Mathew", role: "Distinguished Guest", image: null },
-  { name: "RJ Neena", role: "Distinguished Guest", image: null },
-  { name: "Sajna Sudheer", role: "Distinguished Guest", image: null },
-  { name: "Safrina Latheef", role: "Distinguished Guest", image: null },
-  { name: "Latha K.", role: "Distinguished Guest", image: null },
-  { name: "Uma Preman", role: "Distinguished Guest", image: null },
-  { name: "Anju Bist", role: "Distinguished Guest", image: null },
-  { name: "Nibha Namboodiri", role: "Distinguished Guest", image: null },
-  { name: "Soumya Thomas", role: "Distinguished Guest", image: null },
-  { name: "Dr. Sneha Raju", role: "Distinguished Guest", image: null },
-  { name: "Dr. Amrita Sabu", role: "Distinguished Guest", image: null },
-  { name: "Jeemol Koruth Verghese", role: "Distinguished Guest", image: null },
-  { name: "Justice Mary Joseph", role: "Distinguished Guest", image: null },
-  { name: "Nisha Jose K. Mani", role: "Distinguished Guest", image: null },
-  { name: "Amritha Rajan", role: "Distinguished Guest", image: null },
-  { name: "Raaga Sankar", role: "Distinguished Guest", image: null },
-  { name: "Anila Rajeev", role: "Distinguished Guest", image: null },
-  { name: "Lena", role: "Distinguished Guest", image: null },
-  { name: "Shweta Menon", role: "Distinguished Guest", image: null },
-  { name: "Santhi Mayadevi", role: "Distinguished Guest", image: null },
-];
-
->>>>>>> jesvin-repo/main
 type Speaker = {
   name: string;
   role: string;
@@ -121,52 +69,50 @@ const speakers: Speaker[] = [
     role: "Doctor",
     image: "/images/Dr. Ashitha.png",
   },
-  /*{
+
+  // Uncomment these when images are available
+  /*
+  {
     name: "Leema Jacob",
     role: "Politician",
     image: null,
   },
-   {
+  {
     name: "Arathy Krishna",
-    role: "bodybuilder",
+    role: "Bodybuilder",
     image: null,
   },
-    {
+  {
     name: "Nisary Mahesh",
-    role: "CEO of HerMoneyTalks",
+    role: "CEO, HerMoneyTalks",
     image: null,
   },
-{
+  {
     name: "Melani Shibu",
-    role: "CEO of HerMoneyTalks",
+    role: "Professional",
     image: null,
   },
-
-     {
+  {
     name: "Ashwathy Rajendran",
     role: "Academic Researcher",
     image: null,
   },
-
-     {
+  {
     name: "Anupa Krishnan",
     role: "Model",
     image: null,
   },
-
-      {
+  {
     name: "Vardhini Sharma",
     role: "Singer",
     image: null,
   },
-
   {
     name: "Priyanka Nair",
     role: "Actress",
     image: null,
   },
-
- {
+  {
     name: "Anju Bobby George",
     role: "Athlete",
     image: null,
@@ -260,8 +206,8 @@ const speakers: Speaker[] = [
     name: "Lena",
     role: "Actress",
     image: null,
-  } */
- 
+  },
+  */
 ];
 
 /* ===========================
@@ -278,31 +224,32 @@ const bottomSpeakers = speakers.slice(middle);
 =========================== */
 
 function SpeakerCard({ speaker }: { speaker: Speaker }) {
-  if (speaker.image) {
+  if (!speaker.image) {
     return (
-      <article className={`${styles.card} ${styles.imageCard}`}>
-        <Image
-          src={speaker.image}
-          alt={speaker.name}
-          fill
-          sizes="(max-width:768px) 45vw, 320px"
-          className={styles.image}
-        />
-
-        <div className={styles.imageOverlay}>
-          <div>
-            <h3>{speaker.name}</h3>
-            <p>{speaker.role}</p>
-          </div>
-        </div>
+      <article className={`${styles.card} ${styles.textCard}`}>
+        <h3>{speaker.name}</h3>
+        <p>{speaker.role}</p>
       </article>
     );
   }
 
   return (
-    <article className={`${styles.card} ${styles.textCard}`}>
-      <h3>{speaker.name}</h3>
-      <p>{speaker.role}</p>
+    <article className={`${styles.card} ${styles.imageCard}`}>
+      <Image
+        src={speaker.image}
+        alt={speaker.name}
+        fill
+        priority={false}
+        sizes="(max-width: 768px) 45vw, (max-width: 1200px) 25vw, 320px"
+        className={styles.image}
+      />
+
+      <div className={styles.imageOverlay}>
+        <div>
+          <h3>{speaker.name}</h3>
+          <p>{speaker.role}</p>
+        </div>
+      </div>
     </article>
   );
 }
@@ -311,13 +258,15 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
    MARQUEE ROW
 =========================== */
 
+type SpeakerTrackProps = {
+  speakers: Speaker[];
+  direction: "left" | "right";
+};
+
 function SpeakerTrack({
   speakers,
   direction,
-}: {
-  speakers: Speaker[];
-  direction: "left" | "right";
-}) {
+}: SpeakerTrackProps) {
   const duplicated = [...speakers, ...speakers];
 
   return (
@@ -367,10 +316,12 @@ export default function Speakers() {
           direction="right"
         />
 
-        <SpeakerTrack
-          speakers={bottomSpeakers}
-          direction="left"
-        />
+        {bottomSpeakers.length > 0 && (
+          <SpeakerTrack
+            speakers={bottomSpeakers}
+            direction="left"
+          />
+        )}
       </div>
     </section>
   );

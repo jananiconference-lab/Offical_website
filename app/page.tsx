@@ -10,6 +10,7 @@ import AboutJanani from "@/components/AboutJanani";
 import ChairmanMessage from "@/components/ChairmanMessage";
 import FoundationMessage from "@/components/FoundationMessage";
 import TeamIntro from "@/components/TeamIntro";
+import Flipbook from "@/components/Flipbook";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <ChairmanMessage />
       <AboutJanani />
+      <Flipbook file="/images/jananibrochure.pdf" />
       <FoundationMessage />
       <Legacy/>
       <Speakers/>
