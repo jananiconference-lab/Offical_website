@@ -99,7 +99,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Anupa Krishnan",
-    role: "Model, penn ptt",
+    role: "Model, Penn Patt",
     image: "/images/Anupa Krishnan.png",
   },
   {
