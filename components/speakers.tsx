@@ -103,11 +103,6 @@ const speakers: Speaker[] = [
     image: "/images/Anupa Krishnan.png",
   },
   {
-    name: "Vardhini Sharma",
-    role: "Singer",
-    image: "/images/Vardhini Sharma.png",
-  },
-  {
     name: "Vardhini Prakash",
     role: "Executive Director, Kalyan Hypermarket",
     image: "/images/Vardhini Prakash.png",
