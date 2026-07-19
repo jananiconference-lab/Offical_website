@@ -56,7 +56,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Seena Tony Jose",
-    role: "Environmentalist",
+    role: "journalist",
     image: "/images/seena-tony-jose.png",
   },
   {
@@ -74,7 +74,7 @@ const speakers: Speaker[] = [
   
   {
     name: "Leema Jacob",
-    role: "Politician",
+    role: "Director, GCIS",
     image: "/images/Leema Jacob.jpeg",
   },
   {
@@ -94,12 +94,12 @@ const speakers: Speaker[] = [
   },
   {
     name: "Ashwathy Rajendran",
-    role: "Academic Researcher",
+    role: "Sports Consultant & Founder of Veera Sports Solutions",
     image: "/images/Ashwathy Rajendran.png",
   },
   {
     name: "Anupa Krishnan",
-    role: "Model",
+    role: "Model, penn ptt",
     image: "/images/Anupa Krishnan.png",
   },
   {
@@ -129,7 +129,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Sajna Sudheer",
-    role: "Television Personality",
+    role: "Singer",
     image: "/images/Sajna Sudheer.png",
   },
   {
@@ -154,12 +154,12 @@ const speakers: Speaker[] = [
   },
   {
     name: "Nibha Namboodiri",
-    role: "Professional",
+    role: "Conservationist",
     image: "/images/Nibha Namboodiri.png",
   },
   {
     name: "Soumya Thomas",
-    role: "Professional",
+    role: "Elapacha",
     image: "/images/Soumya Thomas.png",
   },
   {
@@ -173,8 +173,8 @@ const speakers: Speaker[] = [
     image: "/images/Dr Amrita Sabu.jpeg",
   },
   {
-    name: "Jeemol Koruth Verghese",
-    role: "Professional",
+    name: "Jeemol Chacko Verghese",
+    role: "Founder, Eva's Healthy Bakes & The Readiness School",
     image: "/images/Jeemol Koruth Verghese.png",
   },
   {
@@ -184,12 +184,12 @@ const speakers: Speaker[] = [
   },
   {
     name: "Nisha Jose K. Mani",
-    role: "Public Figure",
+    role: "Social Enabler",
     image: "/images/Nisha Jose K Mani.png",
   },
   {
     name: "Amritha Rajan",
-    role: "Professional",
+    role: "Singer, Indian Idol fame",
     image: "/images/Amritha Rajan.png",
   },
   {
@@ -199,7 +199,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Anila Rajeev",
-    role: "Professional",
+    role: "Singer",
     image: "/images/Anila Rajeev.png",
   },
   {
