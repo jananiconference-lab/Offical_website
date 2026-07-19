@@ -149,7 +149,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Anju Bist",
-    role: "Professional",
+    role: "Social Enterpreneur",
     image: "/images/Anju Bist.png",
   },
   {
