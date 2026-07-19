@@ -56,7 +56,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Seena Tony Jose",
-    role: "journalist",
+    role: "Journalist",
     image: "/images/seena-tony-jose.png",
   },
   {
