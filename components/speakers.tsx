@@ -139,7 +139,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Safrina Latheef",
-    role: "Professional",
+    role: "Indian mountaineer",
     image: "/images/Safrina Latheef.png",
   },
   {

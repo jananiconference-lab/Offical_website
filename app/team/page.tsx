@@ -85,7 +85,7 @@ const teamGroups: TeamGroup[] = [
         id: "08",
         name: "Olivia Seira Raiju",
         role: "Core Team",
-        image: "/images/team/oliviya.jpg",
+        image: "/images/Olivia Seira Raiju.jpg",
       },
       {
         id: "09",
