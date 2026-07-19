@@ -91,7 +91,7 @@ const teamGroups: TeamGroup[] = [
         id: "09",
         name: "Karthika Das",
         role: "Core Team",
-        image: "/images/team/karthika-das.jpg",
+        image: "/images/Karthikadas.jpeg",
       },
     ],
   },
