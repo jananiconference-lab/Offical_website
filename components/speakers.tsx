@@ -21,7 +21,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Anooja Bashir",
-    role: "Entrepreneur",
+    role: "Founder - Ourea, FlexiCloud, NEED, PokketCFO & Anooja Initiatives",
     image: "/images/Anooja Bashir.png",
   },
   {
@@ -36,7 +36,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Elsa Royce",
-    role: "Entrepreneur",
+    role: "Founder - CakeStory",
     image: "/images/Elsa Royce.png",
   },
   {
@@ -84,7 +84,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Nisary Mahesh",
-    role: "CEO, HerMoneyTalks",
+    role: "Founder & CEO of HerMoneyTalks",
     image: "/images/Nisary Mahesh.png",
   },
   {
@@ -106,6 +106,11 @@ const speakers: Speaker[] = [
     name: "Vardhini Sharma",
     role: "Singer",
     image: "/images/Vardhini Sharma.png",
+  },
+  {
+    name: "Vardhini Prakash",
+    role: "Executive Director, Kalyan Hypermarket",
+    image: "/images/Vardhini Prakash.png",
   },
   {
     name: "Priyanka Nair",
@@ -138,8 +143,8 @@ const speakers: Speaker[] = [
     image: "/images/Safrina Latheef.png",
   },
   {
-    name: "Chef Letha Kuniyil",
-    role: "First woman chef of Kerala, India",
+    name: "Chef Lata K",
+    role: "Masterchef, Malabar Café, Grand Hyatt Kochi Bolgatty",
     image: "/images/Latha K.png",
   },
   {

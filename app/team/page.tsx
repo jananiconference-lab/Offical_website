@@ -33,7 +33,7 @@ const teamGroups: TeamGroup[] = [
         id: "02",
         name: "APJM Jainulabudeen",
         role: "Secretary, AKIF",
-        image: "/images/team/jainulabudeen.jpg",
+        image: "/images/jainulabudeen.jpg",
       },
       {
         id: "03",
