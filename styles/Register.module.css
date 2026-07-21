@@ -363,8 +363,25 @@
   stroke-width: 5;
 }
 
+ 
+.map {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.map:hover {
+  opacity: 0.9;
+}
+
+.map:hover .mapPoint {
+  transform: scale(1.25);
+}
+
 .mapPoint {
   fill: #0346ff;
+  transform-origin: center;
+  transition: transform .25s ease;
 }
 
 /* =========================

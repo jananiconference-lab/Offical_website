@@ -351,8 +351,13 @@ Gain exclusive access to expert-led sessions, networking opportunities, and indu
           )}
 
           {/* MAP */}
-
-          <div className={styles.map}>
+                  <a
+            href="https://www.google.com/maps/search/?api=1&query=St+Teresa's+College+Ernakulam"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.map}
+            aria-label="Open St. Teresa's College in Google Maps"
+          >
             <svg
               viewBox="0 0 1200 430"
               preserveAspectRatio="xMidYMid slice"
@@ -365,7 +370,6 @@ Gain exclusive access to expert-led sessions, networking opportunities, and indu
                 <path d="M390 0L360 150L500 280L450 430" />
                 <path d="M700 0L640 120L720 240L670 430" />
                 <path d="M950 0L900 170L1020 240L1100 430" />
-
                 <path d="M0 300L180 320L350 240L520 350L700 300L900 390L1200 340" />
                 <path d="M0 90L210 80L330 180L560 70L770 140L980 60L1200 130" />
               </g>
@@ -377,7 +381,8 @@ Gain exclusive access to expert-led sessions, networking opportunities, and indu
                 r="18"
               />
             </svg>
-          </div>
+          </a>
+          {/* MAP ENDS HERE */}
         </div>
       </div>
     </section>

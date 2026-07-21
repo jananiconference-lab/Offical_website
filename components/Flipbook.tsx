@@ -9,7 +9,7 @@ import styles from "../styles/Flipbook.module.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 interface FlipbookProps {
   file: string;
@@ -43,72 +43,26 @@ export default function Flipbook({ file }: FlipbookProps) {
     setNumPages(numPages);
   }
 
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 1024
-  );
-  const [windowHeight, setWindowHeight] = useState(
-    typeof window !== "undefined" ? window.innerHeight : 800
-  );
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      setWindowHeight(window.innerHeight);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isMobile = windowWidth < 768;
-  const bookWidth = isMobile ? windowWidth - 40 : 550;
-  const bookHeight = isMobile ? bookWidth * 1.414 : 778;
-
-  const maxAvailableHeight = windowHeight > 100 ? windowHeight - 100 : 800;
-  const maxAvailableWidth = maxAvailableHeight / 1.414;
-
-  const bookRef = React.useRef<any>(null);
-
-  const nextButtonClick = () => {
-    if (bookRef.current) {
-      bookRef.current.pageFlip().flipNext();
-    }
-  };
-
-  const prevButtonClick = () => {
-    if (bookRef.current) {
-      bookRef.current.pageFlip().flipPrev();
-    }
-  };
-
   return (
     <section className={styles.container}>
-      <Document file={file} onLoadSuccess={onLoadSuccess} className={styles.document}>
+      <Document file={file} onLoadSuccess={onLoadSuccess}>
         {numPages > 0 && (
-          <div className={styles.flipbookWrapper}>
-            <button className={`${styles.navButton} ${styles.prev}`} onClick={prevButtonClick}>
-              &#10094;
-            </button>
-            <button className={`${styles.navButton} ${styles.next}`} onClick={nextButtonClick}>
-              &#10095;
-            </button>
-            <HTMLFlipBook
-              ref={bookRef}
-            style={{}}
-            width={bookWidth}
-            height={bookHeight}
+          <HTMLFlipBook
+            width={450}
+            height={650}
             size="stretch"
-            minWidth={315}
-            maxWidth={isMobile ? 1000 : maxAvailableWidth}
+            minWidth={280}
+            maxWidth={700}
             minHeight={400}
-            maxHeight={isMobile ? 1414 : maxAvailableHeight}
+            maxHeight={900}
             maxShadowOpacity={0.5}
-            showCover={!isMobile}
+            showCover
             mobileScrollSupport
             className={styles.book}
             startPage={0}
             drawShadow
             flippingTime={700}
-            usePortrait={isMobile}
+            usePortrait
             startZIndex={0}
             autoSize
             clickEventForward
@@ -118,17 +72,19 @@ export default function Flipbook({ file }: FlipbookProps) {
             disableFlipByClick={false}
           >
             {Array.from({ length: numPages }).map((_, index) => (
-              <FlipPage key={index} className={styles.page}>
+              <FlipPage
+                key={index}
+                className={styles.page}
+              >
                 <Page
                   pageNumber={index + 1}
+                  width={430}
                   renderAnnotationLayer={false}
                   renderTextLayer={false}
-                  className={styles.pdfPage}
                 />
               </FlipPage>
             ))}
-            </HTMLFlipBook>
-          </div>
+          </HTMLFlipBook>
         )}
       </Document>
     </section>

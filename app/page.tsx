@@ -10,6 +10,7 @@ import ChairmanMessage from "@/components/ChairmanMessage";
 import FoundationMessage from "@/components/FoundationMessage";
 import TeamIntro from "@/components/TeamIntro";
 import FlipbookWrapper from "@/components/FlipbookWrapper";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -20,14 +21,14 @@ export default function Home() {
       <Hero />
       <ChairmanMessage />
       <AboutJanani />
-      <FlipbookWrapper file="/images/jananibrochure.pdf" />
+      <FlipbookWrapper file="/images/E-brouchure.pdf"/> 
       <FoundationMessage />
       <Legacy/>
       <Speakers/>
       <WhyAttend/>
       <TeamIntro/>
       <Register/>
-        
+      <Footer/>
     
     </main>
 
