@@ -22,7 +22,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className={styles.poweredBy}
         >
-          Powered by Raphael Media & Events
+           Website Powered by Raphael Media & Events
         </a>
       </div>
     </footer>
