@@ -59,6 +59,7 @@ export default function Flipbook({ file }: FlipbookProps) {
             showCover
             mobileScrollSupport
             className={styles.book}
+            style={{}}
             startPage={0}
             drawShadow
             flippingTime={700}
