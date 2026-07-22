@@ -54,7 +54,7 @@ export default function RootLayout({
       "sameAs": [
         "https://www.instagram.com/myjanani_/",
         "https://www.linkedin.com/in/my-janani-a1931b420/",
-        "https://www.facebook.com/people/My-Janani/",
+        "https://www.facebook.com/61591611907388/",
         "https://www.youtube.com/@my_janani/shorts"
       ]
     },
