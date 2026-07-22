@@ -96,7 +96,6 @@ export default function LegacyPage() {
           src="/images/kalam.png"
           alt="Portrait of Dr. A. P. J. Abdul Kalam"
           fill
-          priority
           className={styles.heroImage}
           sizes="100vw"
         />

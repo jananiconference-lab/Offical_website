@@ -28,7 +28,6 @@ export default function Legacy() {
               src="/images/kalam.png"
               alt="Dr. A.P.J. Abdul Kalam"
               fill
-              priority
               sizes="(max-width: 768px) 100vw, 50vw"
               className={styles.image}
             />

@@ -35,7 +35,6 @@ export default function FoundationMessage() {
                 src="/images/nazema-maraikayar.jpg"
                 alt="Dr. A.P.J.M. Nazema Maraikayar"
                 fill
-                priority
                 sizes="(max-width: 768px) 100vw, 34vw"
                 className={styles.portraitImage}
               />
