@@ -13,12 +13,22 @@ export default function SponsorsPage() {
           <span className="text-gray-400">SPONSORS</span>
         </h1>
         
-        <div className="inline-block py-2 px-6 border-2 border-white/20 rounded-full text-xl font-medium tracking-widest text-gray-300">
-          COMING SOON
+        <div className="mt-12 space-y-8">
+          {/* Medical Partner */}
+          <div className="inline-block py-4 px-8 border-2 border-white/20 rounded-lg">
+            <p className="text-sm tracking-[0.15em] text-gray-400 uppercase mb-2">Our Medical Partner</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Rajagiri Hospital</h2>
+          </div>
+
+          {/* Automobile Partner */}
+          <div className="inline-block py-4 px-8 border-2 border-white/20 rounded-lg">
+            <p className="text-sm tracking-[0.15em] text-gray-400 uppercase mb-2">Our Automobile Partner</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Nissan</h2>
+          </div>
         </div>
         
-        <p className="text-gray-400 mt-8 max-w-lg mx-auto text-lg">
-          We are currently collaborating with amazing partners and sponsors to make this event extraordinary. Check back soon for updates!
+        <p className="text-gray-400 mt-12 max-w-lg mx-auto text-lg">
+          We are grateful for the exceptional support from our partners, making this event extraordinary.
         </p>
 
         <Link href="/" className="mt-16 text-sm tracking-widest uppercase text-gray-500 hover:text-white transition-colors flex items-center gap-2">
