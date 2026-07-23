@@ -34,13 +34,13 @@ export default function SponsorsPage() {
               key={index}
               className="w-full max-w-[320px] flex flex-col items-center bg-[#111] border border-white/10 rounded-3xl p-6 hover:bg-[#1a1a1a] hover:-translate-y-2 transition-all duration-300 shadow-2xl"
             >
-              <div className={`w-full aspect-square rounded-2xl flex items-center justify-center p-8 mb-6 ${partner.name === "Raphael Media & Events" ? "bg-transparent" : "bg-white shadow-inner"}`}>
+              <div className={`w-[200px] h-[200px] rounded-2xl flex items-center justify-center p-6 mb-6 ${partner.name === "Raphael Media & Events" ? "bg-transparent" : "bg-white shadow-inner"}`}>
                 <Image 
                   src={partner.logo} 
                   alt={partner.name} 
                   width={200} 
                   height={200} 
-                  className={`object-contain w-full h-full ${partner.name === "Raphael Media & Events" ? "" : "mix-blend-multiply"}`}
+                  className={`object-contain max-w-full max-h-full ${partner.name === "Raphael Media & Events" ? "" : "mix-blend-multiply"}`}
                 />
               </div>
               <p className="text-xs tracking-[0.2em] text-gray-500 uppercase mb-2 text-center font-medium">{partner.role}</p>
