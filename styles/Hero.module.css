@@ -800,7 +800,7 @@
    REDUCED MOTION
 ========================================================== */
 
-@media (prefers-reduced-motion: reduce) {
+/*@media (prefers-reduced-motion: reduce) {
   .orbit {
     animation: none;
   }
@@ -809,5 +809,5 @@
   .ctaArrow {
     transition: none;
   }
-}
+}*/
 
