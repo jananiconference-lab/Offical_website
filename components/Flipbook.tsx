@@ -50,7 +50,7 @@ export default function Flipbook({ file }: FlipbookProps) {
           <HTMLFlipBook
             width={450}
             height={650}
-            size="stretch"
+            size="fit"
             minWidth={280}
             maxWidth={700}
             minHeight={400}
