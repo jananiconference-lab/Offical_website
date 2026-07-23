@@ -1366,7 +1366,7 @@
    REDUCED MOTION
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+ /*@media (prefers-reduced-motion: reduce) {
   .heroImage,
   .scrollLine i,
   .quoteOrbit span:first-child,
@@ -1385,7 +1385,7 @@
     is enabled.
   */
 
-  .signalVector span:nth-child(1) {
+  /*.signalVector span:nth-child(1) {
     width: 80px;
     height: 80px;
 
@@ -1412,4 +1412,4 @@
 
     opacity: 0.15;
   }
-}
+}*/
