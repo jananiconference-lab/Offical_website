@@ -6,8 +6,6 @@ const partners = [
   { name: "Raphael Media & Events", role: "Media Partner", logo: "/images/Raphel1.jpeg" },
   { name: "Rajagiri Hospital", role: "Medical Partner", logo: "/images/RAJAGIRI.jpg" },
   { name: "Nissan", role: "Automobile Partner", logo: "/images/nissan.jpeg" },
-  { name: "ATIP", role: "Partner", logo: "/logos/atip.png" },
-  { name: "Mediahawks", role: "Partner", logo: "/logos/Mediahawks.png" },
 ];
 
 export default function SponsorsPage() {
