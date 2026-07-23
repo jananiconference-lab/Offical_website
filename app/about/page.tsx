@@ -482,66 +482,7 @@ export default function ExplorePage() {
           FEATURED VALUES / BENTO
       ====================================================== */}
 
-      <section className={styles.bento}>
-        <div className={styles.bentoLarge}>
-          <div className={styles.bentoMeta}>
-             
-            <span>JANANI®</span>
-          </div>
-
-          <div className={styles.bigSymbol}>
-            <div className={styles.symbolOrbit} />
-          
-          </div>
-
-          <div className={styles.bentoText}>
-            <h3>DIGNITY.</h3>
-
-            <p>
-              Every woman. Every mother.
-              <br />
-              Inherently worthy.
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.bentoBlue}>
-          <span className={styles.bentoNumber}>10</span>
-
-          <div>
-            <span>PRINCIPLES</span>
-            <h3>ONE<br />PURPOSE.</h3>
-          </div>
-        </div>
-
-        <div className={styles.bentoLight}>
-          <div className={styles.bentoMetaDark}>
-            
-            <span>INDIA</span>
-          </div>
-
-          <div className={styles.indiaVector}>
-            <span>IND</span>
-          </div>
-
-          <div>
-            <h3>
-              NATION
-              <br />
-              BUILDING.
-            </h3>
-
-            <p>
-              Stronger women.
-              <br />
-              Stronger families.
-              <br />
-              Stronger nation.
-            </p>
-          </div>
-        </div>
-      </section>
-
+         
       {/* ======================================================
           FINAL
       ====================================================== */}
