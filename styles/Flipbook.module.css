@@ -29,7 +29,7 @@
   height: 100%;
 }
 
-.pdfPage {
+.page :global(.react-pdf__Page) {
   width: 100% !important;
   height: 100% !important;
   display: flex;
@@ -37,7 +37,8 @@
   align-items: center;
 }
 
-.pdfPage canvas {
+.page canvas,
+.page :global(.react-pdf__Page__canvas) {
   max-width: 100% !important;
   max-height: 100% !important;
   width: auto !important;

@@ -80,7 +80,6 @@ export default function Flipbook({ file }: FlipbookProps) {
                 >
                   <Page
                     pageNumber={index + 1}
-                    width={430}
                     renderAnnotationLayer={false}
                     renderTextLayer={false}
                   />
