@@ -137,7 +137,7 @@ export default function ExplorePage() {
         </div>
 
         <header className={styles.topBar}>
-          <span>JANANI® / 2026</span>
+          
           <span>OUR VISION</span>
            
         </header>
@@ -179,8 +179,7 @@ export default function ExplorePage() {
 
       <section className={styles.statement}>
         <div className={styles.statementHeader}>
-          <span>JANANI / VISION</span>
-          <span>EST. 2026</span>
+          
         </div>
 
         <div className={styles.statementContent}>
@@ -210,9 +209,9 @@ export default function ExplorePage() {
 
       <section className={styles.mission}>
         <div className={styles.sectionTop}>
-          <span>02</span>
+         
           <span>OUR MISSION</span>
-          <span>08 OBJECTIVES</span>
+          
         </div>
 
         <div className={styles.missionIntro}>
@@ -391,8 +390,7 @@ export default function ExplorePage() {
 
       <section className={styles.finalSection}>
         <div className={styles.finalTop}>
-          <span>04 / THE MOVEMENT</span>
-          <span>JANANI 2026</span>
+         
         </div>
 
         <div className={styles.finalGraphic} aria-hidden="true">
