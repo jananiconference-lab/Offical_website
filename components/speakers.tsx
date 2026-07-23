@@ -194,7 +194,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Raaga Sankar",
-    role: "Professional",
+    role: "Martial Artist",
     image: "/images/Raaga Shankar.png",
   },
   {
