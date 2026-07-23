@@ -1,3 +1,116 @@
+ .backButton {
+  position: absolute;
+
+  /*
+   * Main navbar occupies the top of the screen.
+   * Back control starts below it.
+   */
+  top: 145px;
+  left: clamp(20px, 4vw, 70px);
+
+  z-index: 50;
+
+  width: 40px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+
+  color: #a4a4a4;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.backButton svg {
+  display: block;
+
+  width: 40px;
+  height: 20px;
+
+  overflow: visible;
+}
+
+.backButton path {
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.25;
+
+  vector-effect: non-scaling-stroke;
+}
+
+/* Blue micro indicator */
+
+.backButton::after {
+  content: "";
+
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  right: -13px;
+
+  border-radius: 50%;
+
+  background: #0346ff;
+
+  opacity: 0;
+
+  transform: scale(0);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.backButton:hover {
+  color: #ffffff;
+
+  transform: translateX(-5px);
+}
+
+.backButton:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .backButton {
+    top: 125px;
+    left: 20px;
+
+    width: 34px;
+    height: 22px;
+  }
+
+  .backButton svg {
+    width: 34px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .backButton {
+    top: 34px;
+    left: auto;
+    right: 82px;
+
+    width: 40px;
+    height: 28px;
+  }
+
+  .backButton svg {
+    width: 27px;
+  }
+}
 .page {
   --black: #000000;
   --card: #1c1a1b;

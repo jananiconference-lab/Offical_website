@@ -3,6 +3,7 @@
 import Link from "next/link";
 import styles from "./explore.module.css";
 
+
 const mission = [
   {
     number: "01",
@@ -280,13 +281,24 @@ function MissionVector({ type }: { type: string }) {
 }
 export default function ExplorePage() {
   return (
+    
     <main className={styles.page}>
+        <Link href="/" className={styles.backButton} aria-label="Back to home">
+  <svg
+    viewBox="0 0 40 20"
+    fill="none"
+    aria-hidden="true"
+  >
+    <path d="M39 10H2" />
+    <path d="M10 2L2 10L10 18" />
+  </svg>
+</Link>
+
       {/* ======================================================
           VISION
       ====================================================== */}
 
       <section className={styles.vision}>
-        <div className={styles.ambientGrid} aria-hidden="true" />
 
         <div className={styles.orbit} aria-hidden="true">
           <span className={styles.orbitOne} />
