@@ -139,7 +139,7 @@ export default function ExplorePage() {
         <header className={styles.topBar}>
           <span>JANANI® / 2026</span>
           <span>OUR VISION</span>
-          <span>01 — 04</span>
+           
         </header>
 
         <div className={styles.visionContent}>
@@ -280,7 +280,7 @@ export default function ExplorePage() {
 
       <section className={styles.values}>
         <div className={styles.valuesTop}>
-          <span>03</span>
+         
           <span>CORE VALUES</span>
           <span>10 PRINCIPLES</span>
         </div>
@@ -328,13 +328,13 @@ export default function ExplorePage() {
       <section className={styles.bento}>
         <div className={styles.bentoLarge}>
           <div className={styles.bentoMeta}>
-            <span>CORE / 01</span>
+             
             <span>JANANI®</span>
           </div>
 
           <div className={styles.bigSymbol}>
             <div className={styles.symbolOrbit} />
-            <span>J</span>
+          
           </div>
 
           <div className={styles.bentoText}>
@@ -359,7 +359,7 @@ export default function ExplorePage() {
 
         <div className={styles.bentoLight}>
           <div className={styles.bentoMetaDark}>
-            <span>CORE / 10</span>
+            
             <span>INDIA</span>
           </div>
 
@@ -416,10 +416,7 @@ export default function ExplorePage() {
             <span>NATIONS.</span>
           </h2>
 
-          <Link href="/register" className={styles.finalButton}>
-            <span>BE PART OF JANANI</span>
-            <span className={styles.buttonCircle}>↗</span>
-          </Link>
+         
         </div>
       </section>
     </main>
