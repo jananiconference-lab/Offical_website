@@ -107,7 +107,6 @@ const scheduleData = [
 export default function SchedulePage() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
-      <Navbar />
       
       <section className="pt-32 pb-20 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="mb-16">

@@ -44,7 +44,6 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
       
       <section className="pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
         <div className="mb-16 text-center">

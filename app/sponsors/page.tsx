@@ -13,7 +13,6 @@ const partners = [
 export default function SponsorsPage() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black flex flex-col pt-32 pb-16">
-      <Navbar />
       
       <section className="flex-1 max-w-6xl mx-auto w-full px-6 flex flex-col items-center">
         
