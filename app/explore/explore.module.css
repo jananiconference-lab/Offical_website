@@ -1,0 +1,1388 @@
+.page {
+  --black: #000000;
+  --card: #1c1a1b;
+  --blue: #0346ff;
+  --white: #ffffff;
+  --muted: #a4a4a4;
+  --light: #dedee0;
+
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: var(--black);
+  color: var(--white);
+
+  font-family: "Satoshi", Arial, sans-serif;
+}
+
+/* ==========================================================
+   VISION
+========================================================== */
+
+.vision {
+  position: relative;
+
+  min-height: 100svh;
+
+  padding:
+    115px
+    clamp(20px, 4vw, 70px)
+    35px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.ambientGrid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.14;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px);
+
+  background-size: 90px 90px;
+
+  mask-image:
+    linear-gradient(to bottom, transparent, black 30%, transparent);
+}
+
+.topBar,
+.sectionTop,
+.valuesTop {
+  position: relative;
+  z-index: 3;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid rgba(255,255,255,.22);
+
+  color: var(--muted);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: .15em;
+}
+
+.topBar span:nth-child(2),
+.sectionTop span:nth-child(2),
+.valuesTop span:nth-child(2) {
+  text-align: center;
+}
+
+.topBar span:last-child,
+.sectionTop span:last-child,
+.valuesTop span:last-child {
+  text-align: right;
+}
+
+.visionContent {
+  position: relative;
+  z-index: 3;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.visionLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 35px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+  letter-spacing: .15em;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+
+  animation: pulse 2s infinite;
+}
+
+.visionTitle {
+  margin: 0;
+
+  font-size: clamp(80px, 11.8vw, 220px);
+
+  line-height: .76;
+
+  letter-spacing: -.075em;
+
+  font-weight: 600;
+}
+
+.visionTitle span {
+  color: var(--blue);
+}
+
+.visionBottom {
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  align-items: end;
+}
+
+.visionIndex {
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+.visionBottom p {
+  width: min(650px, 100%);
+
+  margin: 0;
+
+  font-size: clamp(16px, 1.6vw, 25px);
+
+  line-height: 1.35;
+
+  letter-spacing: -.025em;
+}
+
+.scrollIndicator {
+  position: absolute;
+
+  right: clamp(20px, 4vw, 70px);
+  bottom: 35px;
+
+  z-index: 4;
+
+  display: flex;
+  gap: 18px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+
+  letter-spacing: .13em;
+}
+
+/* ORBIT VECTOR */
+
+.orbit {
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  right: -180px;
+  top: 15%;
+
+  opacity: .6;
+
+  animation: rotateOrbit 30s linear infinite;
+}
+
+.orbitOne,
+.orbitTwo {
+  position: absolute;
+
+  border: 1px solid rgba(3,70,255,.55);
+
+  border-radius: 50%;
+}
+
+.orbitOne {
+  inset: 0;
+}
+
+.orbitTwo {
+  inset: 100px;
+}
+
+.orbitDot {
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+
+  top: 50%;
+  left: -12px;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+}
+
+/* ==========================================================
+   STATEMENT
+========================================================== */
+
+.statement {
+  min-height: 800px;
+
+  padding:
+    30px
+    clamp(20px, 4vw, 70px)
+    45px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--blue);
+}
+
+.statementHeader {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(255,255,255,.35);
+
+  font-size: 9px;
+
+  letter-spacing: .14em;
+}
+
+.statementContent {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: .35fr 2fr;
+
+  align-items: center;
+}
+
+.statementNumber {
+  font-size: 12px;
+}
+
+.statementContent p {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 110px);
+
+  line-height: .95;
+
+  letter-spacing: -.055em;
+
+  font-weight: 500;
+}
+
+.statementContent strong {
+  color: var(--black);
+
+  font-weight: 600;
+}
+
+.statementFooter {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,.35);
+
+  font-size: 10px;
+
+  letter-spacing: .15em;
+}
+
+/* ==========================================================
+   MISSION
+========================================================== */
+
+.mission {
+  padding:
+    30px
+    clamp(20px, 4vw, 70px)
+    120px;
+}
+
+.missionIntro {
+  display: grid;
+
+  grid-template-columns:
+    .3fr
+    1.4fr
+    .55fr;
+
+  gap: 30px;
+
+  padding: 90px 0;
+}
+
+.microLabel {
+  color: var(--muted);
+
+  font-size: 9px;
+
+  letter-spacing: .14em;
+}
+
+.missionIntro h2 {
+  margin: 0;
+
+  font-size: clamp(65px, 8vw, 145px);
+
+  line-height: .78;
+
+  letter-spacing: -.07em;
+
+  font-weight: 600;
+}
+
+.missionIntro h2 span {
+  color: var(--blue);
+}
+
+.missionIntro > p {
+  align-self: end;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.55;
+}
+
+/* MISSION GRID */
+
+.missionGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+.missionCard {
+  position: relative;
+
+  min-height: 520px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: var(--card);
+
+  transition:
+    transform .35s cubic-bezier(.2,.8,.2,1),
+    background .35s ease;
+}
+
+.missionCard:hover {
+  transform: translateY(-8px);
+}
+
+.missionCard:nth-child(3n + 2) {
+  background: var(--blue);
+}
+
+.missionCardTop {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--muted);
+
+  font-size: 9px;
+
+  letter-spacing: .12em;
+}
+
+.missionCard:nth-child(3n + 2) .missionCardTop {
+  color: rgba(255,255,255,.7);
+}
+
+.missionCardContent {
+  margin-top: auto;
+}
+
+.missionCardContent h3 {
+  max-width: 95%;
+
+  margin: 0;
+
+  font-size: clamp(27px, 2.4vw, 46px);
+
+  line-height: .92;
+
+  letter-spacing: -.045em;
+
+  font-weight: 600;
+}
+
+.missionCardContent p {
+  max-width: 90%;
+
+  margin: 20px 0 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.missionCard:nth-child(3n + 2) .missionCardContent p {
+  color: rgba(255,255,255,.78);
+}
+
+.cornerArrow {
+  position: absolute;
+
+  right: 20px;
+  bottom: 18px;
+
+  font-size: 20px;
+
+  opacity: 0;
+
+  transform: translate(-8px, 8px);
+
+  transition: .3s ease;
+}
+
+.missionCard:hover .cornerArrow {
+  opacity: 1;
+
+  transform: translate(0);
+}
+
+/* ==========================================================
+   ABSTRACT VECTORS
+========================================================== */
+
+.vector {
+  position: relative;
+
+  width: 150px;
+  height: 150px;
+
+  margin: 55px auto 30px;
+}
+
+.vectorCircle {
+  position: absolute;
+  inset: 10px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255,255,255,.28);
+
+  border-radius: 50%;
+
+  animation: vectorRotate 15s linear infinite;
+}
+
+.vectorCore {
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid var(--blue);
+
+  transform: rotate(45deg);
+
+  transition: .4s ease;
+}
+
+.missionCard:nth-child(3n + 2) .vectorCore {
+  border-color: white;
+}
+
+.vectorLineA,
+.vectorLineB {
+  position: absolute;
+
+  width: 100%;
+
+  left: 0;
+  top: 50%;
+
+  height: 1px;
+
+  background: rgba(255,255,255,.15);
+}
+
+.vectorLineA {
+  transform: rotate(45deg);
+}
+
+.vectorLineB {
+  transform: rotate(-45deg);
+}
+
+.missionCard:hover .vectorCore {
+  transform: rotate(135deg) scale(1.25);
+}
+
+/* ==========================================================
+   MARQUEE
+========================================================== */
+
+.marqueeSection {
+  padding: 18px 0;
+
+  overflow: hidden;
+
+  background: var(--blue);
+}
+
+.marquee {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.marqueeTrack {
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 40px;
+
+  animation: marqueeMove 24s linear infinite;
+}
+
+.marqueeTrack span {
+  font-size: clamp(55px, 7vw, 130px);
+
+  line-height: .85;
+
+  letter-spacing: -.06em;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.marqueeTrack i {
+  color: var(--black);
+
+  font-size: 45px;
+
+  font-style: normal;
+}
+
+/* ==========================================================
+   VALUES
+========================================================== */
+
+.values {
+  padding:
+    30px
+    clamp(20px, 4vw, 70px)
+    120px;
+
+  background: var(--light);
+
+  color: var(--black);
+}
+
+.valuesTop {
+  color: #555;
+
+  border-color: rgba(0,0,0,.2);
+}
+
+.valuesHeading {
+  display: grid;
+
+  grid-template-columns: 1.4fr .6fr;
+
+  gap: 50px;
+
+  padding: 80px 0;
+}
+
+.valuesHeading h2 {
+  margin: 0;
+
+  font-size: clamp(80px, 10vw, 180px);
+
+  line-height: .76;
+
+  letter-spacing: -.075em;
+
+  font-weight: 600;
+}
+
+.valuesHeading h2 span {
+  color: var(--blue);
+}
+
+.valuesIntro {
+  align-self: end;
+}
+
+.valuesIntro > span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #666;
+
+  font-size: 9px;
+
+  letter-spacing: .13em;
+}
+
+.valuesIntro p {
+  max-width: 400px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+}
+
+/* VALUE ROWS */
+
+.valuesList {
+  border-top: 1px solid rgba(0,0,0,.25);
+}
+
+.valueRow {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    .15fr
+    .75fr
+    1fr
+    auto;
+
+  gap: 30px;
+
+  align-items: center;
+
+  min-height: 125px;
+
+  border-bottom: 1px solid rgba(0,0,0,.2);
+
+  transition:
+    background .25s ease,
+    padding .25s ease,
+    color .25s ease;
+}
+
+.valueRow:hover {
+  padding-left: 18px;
+  padding-right: 18px;
+
+  background: var(--blue);
+  color: white;
+}
+
+.valueNumber {
+  font-size: 10px;
+
+  color: #666;
+}
+
+.valueRow:hover .valueNumber {
+  color: rgba(255,255,255,.7);
+}
+
+.valueRow h3 {
+  margin: 0;
+
+  font-size: clamp(30px, 3vw, 55px);
+
+  line-height: .9;
+
+  letter-spacing: -.05em;
+
+  font-weight: 600;
+}
+
+.valueRow p {
+  max-width: 550px;
+
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+.valueArrow {
+  font-size: 22px;
+}
+
+/* ==========================================================
+   BENTO
+========================================================== */
+
+.bento {
+  padding: 14px;
+
+  display: grid;
+
+  grid-template-columns: 1.4fr .65fr .95fr;
+
+  grid-auto-rows: 700px;
+
+  gap: 12px;
+
+  background: var(--black);
+}
+
+.bentoLarge,
+.bentoBlue,
+.bentoLight {
+  position: relative;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+}
+
+.bentoLarge {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--card);
+}
+
+.bentoBlue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: var(--blue);
+}
+
+.bentoLight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: var(--light);
+  color: var(--black);
+}
+
+.bentoMeta,
+.bentoMetaDark {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 9px;
+
+  letter-spacing: .13em;
+}
+
+.bentoMeta {
+  color: var(--muted);
+}
+
+.bentoMetaDark {
+  color: #555;
+}
+
+.bigSymbol {
+  position: relative;
+
+  flex: 1;
+
+  display: grid;
+  place-items: center;
+}
+
+.bigSymbol > span {
+  position: relative;
+  z-index: 2;
+
+  color: var(--blue);
+
+  font-size: 150px;
+
+  font-weight: 600;
+
+  letter-spacing: -.08em;
+}
+
+.symbolOrbit {
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  border: 1px solid rgba(3,70,255,.7);
+
+  border-radius: 50%;
+
+  animation: pulseOrbit 4s ease-in-out infinite;
+}
+
+.bentoText h3,
+.bentoLight h3,
+.bentoBlue h3 {
+  margin: 0;
+
+  font-size: clamp(50px, 5vw, 90px);
+
+  line-height: .82;
+
+  letter-spacing: -.06em;
+
+  font-weight: 600;
+}
+
+.bentoText p,
+.bentoLight p {
+  margin: 18px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.bentoText p {
+  color: var(--muted);
+}
+
+.bentoNumber {
+  font-size: clamp(100px, 11vw, 190px);
+
+  line-height: .8;
+
+  letter-spacing: -.08em;
+
+  font-weight: 600;
+}
+
+.bentoBlue > div > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 9px;
+
+  letter-spacing: .13em;
+}
+
+.indiaVector {
+  flex: 1;
+
+  display: grid;
+  place-items: center;
+}
+
+.indiaVector span {
+  width: 190px;
+  height: 190px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+
+  font-size: 40px;
+
+  font-weight: 600;
+
+  animation: pulseOrbit 4s ease-in-out infinite;
+}
+
+/* ==========================================================
+   FINAL
+========================================================== */
+
+.finalSection {
+  position: relative;
+
+  min-height: 100svh;
+
+  padding:
+    30px
+    clamp(20px, 4vw, 70px)
+    40px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.finalTop {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(255,255,255,.22);
+
+  color: var(--muted);
+
+  font-size: 9px;
+
+  letter-spacing: .13em;
+}
+
+.finalContent {
+  position: relative;
+  z-index: 3;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.finalContent > p {
+  margin: 0 0 40px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  letter-spacing: .13em;
+}
+
+.finalContent h2 {
+  margin: 0;
+
+  font-size: clamp(100px, 15vw, 270px);
+
+  line-height: .7;
+
+  letter-spacing: -.085em;
+
+  font-weight: 600;
+}
+
+.finalContent h2 span {
+  color: var(--blue);
+}
+
+.finalButton {
+  margin-top: 70px;
+
+  padding: 18px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid rgba(255,255,255,.3);
+  border-bottom: 1px solid rgba(255,255,255,.3);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: .1em;
+}
+
+.buttonCircle {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+
+  font-size: 20px;
+
+  transition: transform .3s ease;
+}
+
+.finalButton:hover .buttonCircle {
+  transform: rotate(45deg);
+}
+
+/* FINAL BACKGROUND VECTOR */
+
+.finalGraphic {
+  position: absolute;
+
+  width: 800px;
+  height: 800px;
+
+  right: -300px;
+  top: 100px;
+}
+
+.finalCircleOne,
+.finalCircleTwo,
+.finalCircleThree {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(3,70,255,.35);
+}
+
+.finalCircleOne {
+  inset: 0;
+
+  animation: rotateOrbit 30s linear infinite;
+}
+
+.finalCircleTwo {
+  inset: 120px;
+}
+
+.finalCircleThree {
+  inset: 250px;
+
+  background: var(--blue);
+
+  opacity: .08;
+
+  animation: pulseOrbit 5s ease-in-out infinite;
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vectorRotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes marqueeMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .4;
+    transform: scale(.65);
+  }
+}
+
+@keyframes pulseOrbit {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.88);
+  }
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1100px) {
+  .missionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .missionIntro {
+    grid-template-columns: 1fr;
+  }
+
+  .missionIntro > div {
+    display: none;
+  }
+
+  .missionIntro > p {
+    max-width: 500px;
+  }
+
+  .bento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bentoLarge {
+    grid-column: span 2;
+  }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 650px) {
+  .vision {
+    padding:
+      95px
+      18px
+      25px;
+  }
+
+  .topBar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .topBar span:nth-child(2) {
+    display: none;
+  }
+
+  .visionTitle {
+    font-size: clamp(65px, 21vw, 105px);
+
+    line-height: .78;
+  }
+
+  .visionBottom {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .visionIndex {
+    display: none;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+
+  .orbit {
+    width: 400px;
+    height: 400px;
+
+    right: -250px;
+  }
+
+  .statement {
+    min-height: 650px;
+
+    padding:
+      25px
+      18px
+      30px;
+  }
+
+  .statementContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .statementContent p {
+    font-size: clamp(38px, 11vw, 60px);
+  }
+
+  .statementFooter {
+    font-size: 7px;
+  }
+
+  .mission {
+    padding:
+      25px
+      18px
+      70px;
+  }
+
+  .sectionTop,
+  .valuesTop {
+    grid-template-columns: auto 1fr;
+  }
+
+  .sectionTop span:nth-child(2),
+  .valuesTop span:nth-child(2) {
+    text-align: right;
+  }
+
+  .sectionTop span:last-child,
+  .valuesTop span:last-child {
+    display: none;
+  }
+
+  .missionIntro {
+    padding: 55px 0;
+  }
+
+  .missionIntro h2 {
+    font-size: clamp(58px, 18vw, 90px);
+  }
+
+  .missionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .missionCard {
+    min-height: 430px;
+
+    border-radius: 16px;
+  }
+
+  .vector {
+    width: 120px;
+    height: 120px;
+
+    margin-top: 40px;
+  }
+
+  .marqueeTrack span {
+    font-size: 55px;
+  }
+
+  .values {
+    padding:
+      25px
+      18px
+      70px;
+  }
+
+  .valuesHeading {
+    grid-template-columns: 1fr;
+
+    padding: 55px 0;
+  }
+
+  .valuesHeading h2 {
+    font-size: clamp(65px, 21vw, 105px);
+  }
+
+  .valueRow {
+    grid-template-columns:
+      35px
+      1fr
+      auto;
+
+    gap: 10px;
+
+    min-height: 110px;
+  }
+
+  .valueRow p {
+    display: none;
+  }
+
+  .valueRow h3 {
+    font-size: clamp(27px, 8vw, 42px);
+  }
+
+  .bento {
+    display: flex;
+    flex-direction: column;
+
+    padding: 8px;
+  }
+
+  .bentoLarge,
+  .bentoBlue,
+  .bentoLight {
+    min-height: 550px;
+
+    border-radius: 16px;
+  }
+
+  .bentoBlue {
+    min-height: 480px;
+  }
+
+  .symbolOrbit {
+    width: 220px;
+    height: 220px;
+  }
+
+  .finalSection {
+    padding:
+      25px
+      18px
+      30px;
+  }
+
+  .finalContent h2 {
+    font-size: clamp(78px, 24vw, 125px);
+
+    line-height: .72;
+  }
+
+  .finalGraphic {
+    width: 500px;
+    height: 500px;
+
+    right: -350px;
+  }
+}
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit,
+  .vectorCircle,
+  .marqueeTrack,
+  .blueDot,
+  .symbolOrbit,
+  .indiaVector,
+  .finalCircleOne,
+  .finalCircleThree {
+    animation: none;
+  }
+}
