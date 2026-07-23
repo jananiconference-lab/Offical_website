@@ -428,6 +428,10 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.legacyCard:nth-child(3) .cardTop {
+  color: #666666;
+}
+
 .cardContent {
   position: relative;
   z-index: 4;
@@ -485,16 +489,22 @@
   z-index: 1;
 
   pointer-events: none;
+
+  opacity: 1;
 }
 
-/* ORBIT */
+/* =========================================================
+   01 / ISRO — ORBIT
+========================================================= */
 
 .orbitVector {
-  width: 360px;
-  height: 360px;
+  width: 340px;
+  height: 340px;
 
   top: 70px;
-  right: 50px;
+  right: 45px;
+
+  animation: vectorFloat 6s ease-in-out infinite;
 }
 
 .orbitVector span {
@@ -502,8 +512,6 @@
 
   top: 50%;
   left: 50%;
-
-  border: 1px solid rgba(255, 255, 255, 0.14);
 
   border-radius: 50%;
 
@@ -514,7 +522,9 @@
   width: 100%;
   height: 100%;
 
-  animation: orbitSpin 12s linear infinite;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  animation: orbitSpin 10s linear infinite;
 }
 
 .orbitRingOne::before {
@@ -525,27 +535,53 @@
 
   position: absolute;
 
-  top: 20px;
+  top: 23px;
   left: 50%;
 
   background: #0346ff;
 
   border-radius: 50%;
+
+  box-shadow:
+    0 0 0 6px rgba(3, 70, 255, 0.08),
+    0 0 22px rgba(3, 70, 255, 0.45);
 }
 
 .orbitRingTwo {
-  width: 70%;
-  height: 70%;
+  width: 68%;
+  height: 68%;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  animation: orbitSpinReverse 14s linear infinite;
+}
+
+.orbitRingTwo::after {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  position: absolute;
+
+  right: 15px;
+  top: 50%;
+
+  background: #ffffff;
+
+  border-radius: 50%;
 }
 
 .orbitRingThree {
-  width: 35%;
-  height: 35%;
+  width: 34%;
+  height: 34%;
+
+  border: 1px solid rgba(212, 165, 58, 0.65);
 }
 
 .orbitVector i {
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
 
   position: absolute;
 
@@ -557,115 +593,206 @@
   border-radius: 50%;
 
   transform: translate(-50%, -50%);
+
+  box-shadow: 0 0 24px rgba(212, 165, 58, 0.45);
 }
 
-/* TRAJECTORY */
+/* =========================================================
+   02 / MISSILE MAN — TRAJECTORY
+========================================================= */
 
 .trajectoryVector {
-  width: 500px;
-  height: 300px;
+  width: 470px;
+  height: 270px;
 
-  top: 100px;
-  right: -100px;
+  top: 90px;
+  right: -80px;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 
   border-radius: 50%;
 
-  transform: rotate(-22deg);
+  transform: rotate(-20deg);
 }
 
 .trajectoryVector span {
   position: absolute;
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 
   border-radius: 50%;
 }
 
 .trajectoryVector span:nth-child(1) {
-  inset: 35px;
+  inset: 34px;
 }
 
 .trajectoryVector span:nth-child(2) {
-  inset: 70px;
+  inset: 67px;
 }
 
 .trajectoryVector span:nth-child(3) {
-  inset: 105px;
+  inset: 100px;
+
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .trajectoryVector i {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 
   position: absolute;
 
-  top: 50%;
-  left: 0;
+  top: calc(50% - 8px);
+  left: -8px;
 
   background: #ffffff;
 
   border-radius: 50%;
 
-  animation: trajectoryMove 4s ease-in-out infinite;
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.1),
+    0 0 30px rgba(255, 255, 255, 0.4);
+
+  animation: trajectoryTravel 4s
+    cubic-bezier(0.45, 0, 0.55, 1)
+    infinite;
 }
 
-/* NATION */
+/* =========================================================
+   03 / PRESIDENT — NATION
+========================================================= */
 
 .nationVector {
   width: 300px;
   height: 240px;
 
-  top: 90px;
+  top: 80px;
   right: 50px;
 
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 
-  gap: 10px;
+  gap: 12px;
+
+  transform: rotate(-5deg);
 }
 
 .nationVector span {
+  position: relative;
+
+  display: block;
+
   background: #0346ff;
 
   border-radius: 50%;
 
-  animation: nationPulse 2.8s ease-in-out infinite;
+  transform: scale(0.7);
+
+  animation: nationWave 3s
+    cubic-bezier(0.16, 1, 0.3, 1)
+    infinite;
 }
 
-.nationVector span:nth-child(2n) {
-  animation-delay: -0.7s;
+.nationVector span::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 25%;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  border-radius: inherit;
 }
 
-.nationVector span:nth-child(3n) {
-  animation-delay: -1.4s;
+.nationVector span:nth-child(1) {
+  animation-delay: 0s;
 }
 
-/* SIGNAL */
+.nationVector span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.nationVector span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.nationVector span:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.nationVector span:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.nationVector span:nth-child(6) {
+  animation-delay: 0.75s;
+}
+
+.nationVector span:nth-child(7) {
+  animation-delay: 0.9s;
+}
+
+.nationVector span:nth-child(8) {
+  animation-delay: 1.05s;
+}
+
+/* =========================================================
+   04 / TEACHER — SIGNAL
+========================================================= */
 
 .signalVector {
-  width: 330px;
-  height: 330px;
+  width: 320px;
+  height: 320px;
 
-  top: 70px;
-  right: 40px;
+  top: 65px;
+  right: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.signalVector::after {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  background: #d4a53a;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 8px rgba(212, 165, 58, 0.08),
+    0 0 24px rgba(212, 165, 58, 0.35);
 }
 
 .signalVector span {
   position: absolute;
 
-  top: 50%;
-  left: 50%;
+  width: 35px;
+  height: 35px;
 
-  border: 1px solid rgba(3, 70, 255, 0.6);
+  border: 1px solid rgba(3, 70, 255, 0.8);
 
   border-radius: 50%;
 
-  transform: translate(-50%, -50%);
+  opacity: 0;
 
-  animation: signalPulse 4s ease-out infinite;
+  animation: signalExpand 4s
+    cubic-bezier(0.2, 0.7, 0.3, 1)
+    infinite;
+}
+
+.signalVector span:nth-child(1) {
+  animation-delay: 0s;
 }
 
 .signalVector span:nth-child(2) {
@@ -833,49 +960,108 @@
 
 @keyframes orbitSpin {
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
   }
 
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
   }
 }
 
-@keyframes trajectoryMove {
+@keyframes orbitSpinReverse {
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+}
+
+@keyframes vectorFloat {
   0%,
   100% {
-    left: 0;
+    transform: translateY(0);
   }
 
   50% {
-    left: 92%;
+    transform: translateY(-12px);
   }
 }
 
-@keyframes nationPulse {
+@keyframes trajectoryTravel {
+  0% {
+    left: -8px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    left: calc(100% - 8px);
+
+    opacity: 0;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes nationWave {
   0%,
   100% {
-    transform: scale(0.7);
+    transform: scale(0.65);
+
     border-radius: 50%;
+
+    opacity: 0.55;
   }
 
   50% {
     transform: scale(1);
-    border-radius: 12px;
-  }
-}
 
-@keyframes signalPulse {
-  from {
-    width: 20px;
-    height: 20px;
+    border-radius: 8px;
 
     opacity: 1;
   }
+}
 
-  to {
-    width: 330px;
-    height: 330px;
+@keyframes signalExpand {
+  0% {
+    width: 35px;
+    height: 35px;
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.25;
+  }
+
+  100% {
+    width: 310px;
+    height: 310px;
 
     opacity: 0;
   }
@@ -1031,36 +1217,71 @@
     font-size: 12px;
   }
 
-  .orbitVector {
-    width: 230px;
-    height: 230px;
+  /* CARD VECTORS MOBILE */
 
-    top: 80px;
-    right: -30px;
+  .orbitVector {
+    width: 220px;
+    height: 220px;
+
+    top: 75px;
+    right: -20px;
+  }
+
+  .orbitRingOne::before {
+    width: 10px;
+    height: 10px;
+
+    top: 15px;
   }
 
   .trajectoryVector {
-    width: 330px;
-    height: 190px;
+    width: 300px;
+    height: 170px;
 
-    top: 100px;
-    right: -100px;
+    top: 105px;
+    right: -85px;
+  }
+
+  .trajectoryVector span:nth-child(1) {
+    inset: 25px;
+  }
+
+  .trajectoryVector span:nth-child(2) {
+    inset: 48px;
+  }
+
+  .trajectoryVector span:nth-child(3) {
+    inset: 70px;
+  }
+
+  .trajectoryVector i {
+    width: 12px;
+    height: 12px;
+
+    top: calc(50% - 6px);
   }
 
   .nationVector {
-    width: 190px;
-    height: 150px;
+    width: 180px;
+    height: 145px;
 
     top: 90px;
     right: 20px;
+
+    gap: 7px;
   }
 
   .signalVector {
-    width: 230px;
-    height: 230px;
+    width: 220px;
+    height: 220px;
 
-    top: 70px;
-    right: -20px;
+    top: 75px;
+    right: -10px;
+  }
+
+  .signalVector::after {
+    width: 9px;
+    height: 9px;
   }
 
   /* JANANI */
@@ -1115,6 +1336,30 @@
   .backButton {
     width: 100%;
   }
+
+  @keyframes signalExpand {
+    0% {
+      width: 25px;
+      height: 25px;
+
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 0.25;
+    }
+
+    100% {
+      width: 215px;
+      height: 215px;
+
+      opacity: 0;
+    }
+  }
 }
 
 /* =========================================================
@@ -1124,12 +1369,47 @@
 @media (prefers-reduced-motion: reduce) {
   .heroImage,
   .scrollLine i,
-  .quoteOrbit span,
+  .quoteOrbit span:first-child,
+  .orbitVector,
   .orbitRingOne,
+  .orbitRingTwo,
   .trajectoryVector i,
   .nationVector span,
   .signalVector span,
   .jananiDot {
     animation: none;
+  }
+
+  /*
+    Keep signal rings visible even when reduced motion
+    is enabled.
+  */
+
+  .signalVector span:nth-child(1) {
+    width: 80px;
+    height: 80px;
+
+    opacity: 0.7;
+  }
+
+  .signalVector span:nth-child(2) {
+    width: 140px;
+    height: 140px;
+
+    opacity: 0.5;
+  }
+
+  .signalVector span:nth-child(3) {
+    width: 210px;
+    height: 210px;
+
+    opacity: 0.3;
+  }
+
+  .signalVector span:nth-child(4) {
+    width: 280px;
+    height: 280px;
+
+    opacity: 0.15;
   }
 }

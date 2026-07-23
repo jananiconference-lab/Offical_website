@@ -280,6 +280,7 @@ export default function LegacyPage() {
           <span>Back to JANANI</span>
           <span>↖</span>
         </Link>*/}
+        
       </section>
     </main>
   );
