@@ -276,10 +276,10 @@ export default function LegacyPage() {
           THE MIND.
         </h2>
 
-        <Link href="/" className={styles.backButton}>
+       { /*<Link href="/" className={styles.backButton}>
           <span>Back to JANANI</span>
           <span>↖</span>
-        </Link>
+        </Link>*/}
       </section>
     </main>
   );
