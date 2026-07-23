@@ -13,8 +13,7 @@ export default function AboutJanani() {
         <article className={styles.contentPanel}>
           <div className={styles.sectionLabel}>
             
-            <span>/</span>
-            <span>ABOUT JANANI</span>
+            
           </div>
 
           <div className={styles.contentBody}>

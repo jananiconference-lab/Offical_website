@@ -693,7 +693,7 @@
    REDUCED MOTION
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+/*@media (prefers-reduced-motion: reduce) {
   .discoverButton,
   .buttonArrow {
     transition: none;
@@ -702,4 +702,4 @@
   .petals {
     animation: none;
   }
-}
+}*/

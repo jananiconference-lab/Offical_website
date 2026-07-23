@@ -626,7 +626,7 @@
    REDUCED MOTION
 ========================= */
 
-@media (prefers-reduced-motion: reduce) {
+/*@media (prefers-reduced-motion: reduce) {
   .portrait,
   .orbit,
   .scanField span {
@@ -637,4 +637,4 @@
   .portraitCard:hover .portrait {
     transform: scale(1.015);
   }
-}
+}*/
