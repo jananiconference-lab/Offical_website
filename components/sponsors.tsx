@@ -14,7 +14,7 @@ export default function FeaturedIn() {
     <section className={styles.section}>
 
       <p className={styles.label}>
-        FEATURED IN
+        Powered By 
       </p>
 
       <div className={styles.marquee}>
