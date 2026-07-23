@@ -16,7 +16,7 @@ const blogs = [
   {
     title: "Janani 2026 Highlights",
     source: "Facebook",
-    image: "/images/blogs/facebook-cover.jpg",
+    image: "/images/blogs/bizcuts.jpg",
     excerpt:
       "Event photographs, audience moments, speaker highlights and behind-the-scenes coverage from the official launch.",
     url: "https://www.facebook.com/share/p/1EdQNCbAaz/",
