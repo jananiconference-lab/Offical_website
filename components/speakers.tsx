@@ -207,7 +207,11 @@ const speakers: Speaker[] = [
     role: "Actress",
     image: "/images/lena.png",
   },
-  
+  {
+    name: "Sandhya IPS",
+    role: "Retired IPS officer",
+    image: "/images/SANDHYA IPS.png",
+  },
 ];
 
 /* ===========================
