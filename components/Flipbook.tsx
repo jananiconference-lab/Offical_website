@@ -47,45 +47,47 @@ export default function Flipbook({ file }: FlipbookProps) {
     <section className={styles.container}>
       <Document file={file} onLoadSuccess={onLoadSuccess}>
         {numPages > 0 && (
-          <HTMLFlipBook
-            width={450}
-            height={650}
-            size="stretch"
-            minWidth={280}
-            maxWidth={450}
-            minHeight={400}
-            maxHeight={650}
-            maxShadowOpacity={0.5}
-            showCover
-            mobileScrollSupport
-            className={styles.book}
-            style={{}}
-            startPage={0}
-            drawShadow
-            flippingTime={700}
-            usePortrait
-            startZIndex={0}
-            autoSize
-            clickEventForward
-            useMouseEvents
-            swipeDistance={30}
-            showPageCorners
-            disableFlipByClick={false}
-          >
-            {Array.from({ length: numPages }).map((_, index) => (
-              <FlipPage
-                key={index}
-                className={styles.page}
-              >
-                <Page
-                  pageNumber={index + 1}
-                  width={430}
-                  renderAnnotationLayer={false}
-                  renderTextLayer={false}
-                />
-              </FlipPage>
-            ))}
-          </HTMLFlipBook>
+          <div className={styles.flipbookWrapper}>
+            <HTMLFlipBook
+              width={450}
+              height={650}
+              size="stretch"
+              minWidth={280}
+              maxWidth={450}
+              minHeight={400}
+              maxHeight={650}
+              maxShadowOpacity={0.5}
+              showCover
+              mobileScrollSupport
+              className={styles.book}
+              style={{}}
+              startPage={0}
+              drawShadow
+              flippingTime={700}
+              usePortrait
+              startZIndex={0}
+              autoSize
+              clickEventForward
+              useMouseEvents
+              swipeDistance={30}
+              showPageCorners
+              disableFlipByClick={false}
+            >
+              {Array.from({ length: numPages }).map((_, index) => (
+                <FlipPage
+                  key={index}
+                  className={styles.page}
+                >
+                  <Page
+                    pageNumber={index + 1}
+                    width={430}
+                    renderAnnotationLayer={false}
+                    renderTextLayer={false}
+                  />
+                </FlipPage>
+              ))}
+            </HTMLFlipBook>
+          </div>
         )}
       </Document>
     </section>
