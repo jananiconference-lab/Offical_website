@@ -34,9 +34,6 @@ export default function Home() {
      <Newsletter/>
       <Blogs/>
       <Register/>
-      <Footer/>
-    
     </main>
-
   );
 }

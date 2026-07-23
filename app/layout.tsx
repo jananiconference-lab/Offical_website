@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   },
 };
 
+import Footer from "@/components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -96,7 +98,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <div className="flex-1">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
