@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useState, useRef } from "react";
+import { FormEvent, useCallback, useEffect, useState, useRef } from "react";
 import { supabase } from "../lib/supabase";
 import { QRCodeSVG } from "qrcode.react";
 import html2canvas from "html2canvas";
@@ -94,7 +94,7 @@ export default function Register() {
     }
   };
 
-  const downloadTicket = () => {
+  const downloadTicket = useCallback(() => {
     if (ticketRef.current && ticketData) {
       html2canvas(ticketRef.current, { backgroundColor: "#1c1a1b" }).then(canvas => {
         const link = document.createElement("a");
@@ -103,7 +103,7 @@ export default function Register() {
         link.click();
       });
     }
-  };
+  }, [ticketData]);
 
   useEffect(() => {
     if (status === "success" && ticketData) {
@@ -113,7 +113,7 @@ export default function Register() {
       }, 500);
       return () => clearTimeout(timer);
     }
-  }, [status, ticketData]);
+  }, [status, ticketData, downloadTicket]);
 
   return (
     <section className={styles.section} id="register">
@@ -333,7 +333,7 @@ Gain exclusive access to expert-led sessions, networking opportunities, and indu
 
                 <div className={styles.ticketField}>
                   <span>Location</span>
-                  St. Teresa's College
+                  St. Teresa&apos;s College
                   <br />
                   Ernakulam
                 </div>

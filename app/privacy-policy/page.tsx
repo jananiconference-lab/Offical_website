@@ -11,13 +11,13 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">1. Introduction</h2>
             <p>
-              Welcome to the official website of JANANI 2026 ("we," "our," or "us"). We are committed to protecting your personal data and respecting your privacy. This Privacy Policy outlines how we collect, process, use, and safeguard your personal data in accordance with the <strong>Digital Personal Data Protection (DPDP) Act, 2023</strong> of India.
+              Welcome to the official website of JANANI 2026 (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your personal data and respecting your privacy. This Privacy Policy outlines how we collect, process, use, and safeguard your personal data in accordance with the <strong>Digital Personal Data Protection (DPDP) Act, 2023</strong> of India.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">2. The Personal Data We Collect</h2>
-            <p className="mb-2">We may collect and process the following categories of personal data (collectively, "Personal Data"):</p>
+            <p className="mb-2">We may collect and process the following categories of personal data (collectively, &quot;Personal Data&quot;):</p>
             <ul className="list-disc pl-5 space-y-2">
               <li><strong>Identity Data:</strong> First name, last name, title, and institutional affiliation.</li>
               <li><strong>Contact Data:</strong> Email address, mobile number, and billing/mailing address.</li>
@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
             </p>
             <address className="mt-4 not-italic bg-white/5 p-4 rounded-lg border border-white/10">
               <strong>Email:</strong> privacy@myjanani.in<br />
-              <strong>Address:</strong> JANANI Foundation, St. Teresa's College (Autonomous), Ernakulam, Kerala, India.
+              <strong>Address:</strong> JANANI Foundation, St. Teresa&apos;s College (Autonomous), Ernakulam, Kerala, India.
             </address>
           </section>
         </div>
