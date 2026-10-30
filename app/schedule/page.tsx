@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 const scheduleData = [
@@ -121,7 +120,7 @@ export default function SchedulePage() {
             
             <div className="text-right border-l-2 border-white/20 pl-6 md:border-l-0 md:border-r-2 md:pr-6 md:pl-0 self-start md:self-end">
               <p className="font-medium text-xl">24 July 2026</p>
-              <p className="text-gray-400 mt-1 max-w-[200px]">St. Teresa's College (Autonomous), Ernakulam</p>
+              <p className="text-gray-400 mt-1 max-w-[200px]">St. Teresa&apos;s College (Autonomous), Ernakulam</p>
             </div>
           </div>
         </div>

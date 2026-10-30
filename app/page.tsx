@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Speakers from "@/components/speakers";
 import WhyAttend from "@/components/WhyAttend";
@@ -10,7 +9,6 @@ import ChairmanMessage from "@/components/ChairmanMessage";
 import FoundationMessage from "@/components/FoundationMessage";
 import TeamIntro from "@/components/TeamIntro";
 import FlipbookWrapper from "@/components/FlipbookWrapper";
-import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter"
  import Blogs from "@/components/blogs"
 import Sponsors from "@/components/sponsors";

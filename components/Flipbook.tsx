@@ -42,7 +42,7 @@ export default function Flipbook({
     height: 780,
   });
 
-  const flipBook = useRef<any>(null);
+  const flipBook = useRef<{ pageFlip: () => { flipNext: () => void; flipPrev: () => void } } | null>(null);
 
   function onLoadSuccess({
     numPages,

@@ -11,7 +11,7 @@ export default function TermsOfUse() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">1. Agreement to Terms</h2>
             <p>
-              By accessing and using the official website of JANANI 2026 (the "Site"), you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, you are prohibited from using or accessing this site.
+              By accessing and using the official website of JANANI 2026 (the &quot;Site&quot;), you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, you are prohibited from using or accessing this site.
             </p>
           </section>
 
@@ -41,7 +41,7 @@ export default function TermsOfUse() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">5. Disclaimer and Limitation of Liability</h2>
             <p>
-              The materials on the Site are provided on an 'as is' basis. JANANI 2026 makes no warranties, expressed or implied, regarding the accuracy or reliability of the site's content. In no event shall the JANANI Foundation or its partners be liable for any consequential damages, lost profits, or business interruption arising out of the use or inability to use the Site or attendance at the event.
+              The materials on the Site are provided on an &apos;as is&apos; basis. JANANI 2026 makes no warranties, expressed or implied, regarding the accuracy or reliability of the site&apos;s content. In no event shall the JANANI Foundation or its partners be liable for any consequential damages, lost profits, or business interruption arising out of the use or inability to use the Site or attendance at the event.
             </p>
           </section>
 

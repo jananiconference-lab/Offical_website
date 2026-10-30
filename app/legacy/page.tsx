@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./legacy.module.css";
 
 const legacyItems = [
@@ -180,7 +179,7 @@ export default function LegacyPage() {
           <div className={styles.introCopy}>
             <p>
               Born in Rameswaram in 1931, Dr. A.P.J. Abdul Kalam rose from
-              humble beginnings to become one of India's most influential
+              humble beginnings to become one of India&apos;s most influential
               scientists and its 11th President.
             </p>
 
